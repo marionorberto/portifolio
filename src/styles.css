@@ -1,1 +1,290 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('./assets/fonts/Roboto-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('./assets/fonts/Roboto-Light.ttf');
+}
+
+:root{
+  --bg-primary: #000;
+  --bg-secondary: #090909;
+  --color-primary-green: rgb(113, 157, 116);
+  --color-primary-green: rgb(21, 79, 25);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--bg-primary);
+  font-family: 'Roboto-Medium';
+  color: white;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+canvas {
+    display: block;
+    filter: brightness(20%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    background-color: transparent;
+    font-weight: 200;
+}
+
+ul{
+    display: flex;
+    gap: 15px;
+}
+
+li {
+    list-style: none;
+    font-family: 'Roboto-Light';
+    position: relative;
+}
+li>a:hover{
+     color: var(--color-primary-green);
+}
+
+.nav-link::before{
+    position: absolute;
+    content: '';
+    bottom: -4px;
+    margin-top: 2px;
+    background-color: rgb(21, 79, 25);
+    height: 3px;
+    width: 100%;
+    scale: 0;
+    transform-origin: right;
+    transition: all 0.4s ;
+}
+
+.nav-link:hover::before{
+    transition: all 0.4s;
+    scale: 1;
+}
+
+.hire-me{
+    padding: 6px 4px;
+    background-color: #000;
+    outline: 1px solid #fff;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.hire-me:active{
+    transform: scale(0.98);
+    outline-color: rgb(21, 79, 25) ;
+    color: rgb(113, 157, 116);
+}
+
+
+/*
+
+
+
+
+
+
+
+
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#stack{
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 18px;
+}
+
+#text-stack{
+    font-size: 13px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    font-family: 'Roboto-Light';
+    font-weight: lighter;
+}
+
+#bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    font-size: 2.2rem;
+    color: rgb(225, 225, 225);
+}
+
+#bottom-left{
+    display: flex;
+    align-items: end;
+    margin-top: -30px;
+    font-family: 'Roboto-Light';
+    margin-right: 50px;
+}
+
+#bottom-right{
+    display: flex;
+    align-items: end;
+    margin-top: 40px;
+    font-family: 'Roboto-Light';
+    margin-left: 50px;
+}
+header{
+    padding-bottom: 20px;
+}
+
+main{
+    padding: 20px 0;
+}
+
+#works{
+    height: 25rem;
+    width: 100%;
+    background: #090909;
+}
+
+#works>h1{
+    text-align: center;
+    margin: 5px 0;
+}
+
+#works>h4{
+    font-family: 'Roboto-Light';
+    text-align: center;
+    color: rgb(113, 157, 116);
+}
+
+.project{
+    height: 200px;
+    width: 200px;
+    background-color: white;
+}
+
+
+#services{
+    height: 25rem;
+    width: 100%;
+    background: #000;
+}
+
+#resume{
+    height: 25rem;
+    width: 100%;
+    background: #090909;
+}
+
+#contacts{
+    height: 25rem;
+    width: 100%;
+    background: #000;
+}
+
+.div-projects{
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.first-text-main{
+    text-align: center;
+    margin: 50px 0 2px 0;
+    font-size: 2.5rem;
+}
+
+.second-text-main{
+    font-family: 'Roboto-Light';
+    text-align: center;
+    color: rgb(113, 157, 116);
+    margin-bottom: 50px;
+}
+
+.div-skill{
+    text-align: center;
+}
+
+.container-skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+    gap: 40px;
+    padding: 0 40px 0 40px;
+}
+
+.container-skills-first{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-skills-second{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-network{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+.container-social-network{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Roboto-Light';
+}
+
+.short-line{
+    width: 300px;
+    font-family: 'Roboto-Light';
+    font-size: small;
+}
+
+*/
