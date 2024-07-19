@@ -1,0 +1,13 @@
+#works{
+  padding: 50px;
+}
+
+.work-title{
+  text-align: center;
+  margin-bottom: 2px;
+  font-size: 2.5rem;
+}
+
+.work-subtitle{
+  font-size: 1.2rem;
+}

@@ -1,9 +1,20 @@
 import { Component } from '@angular/core';
+import { WorksComponent } from '../works/works.component';
+import { ServicesComponent } from '../services/services.component';
+import { ContactsComponent } from '../contacts/contacts.component';
+import { ResumeComponent } from '../resume/resume.component';
+import { CertificationComponent } from '../certification/certification.component';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [],
+  imports: [
+    WorksComponent,
+    ServicesComponent,
+    ContactsComponent,
+    ResumeComponent,
+    CertificationComponent
+  ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })

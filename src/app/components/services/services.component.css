@@ -1,0 +1,23 @@
+p {
+  font-family: 'Roboto-Light';
+}
+
+#services{
+  padding-bottom: 200px;
+}
+
+.services-subtitle{
+  font-size: 1.2rem;
+}
+
+.div-skill{
+  transition: ease-in-out 0.7s;
+}
+
+.div-skill:hover{
+  border: 3px solid var(--color-primary-green);
+  border-style: dashed;
+  padding: 15px 12px;
+  /* box-shadow: 1px 1px 1px 2px white; */
+  /* transform: translateY(-14px); */
+}
