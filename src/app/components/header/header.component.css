@@ -1,0 +1,42 @@
+canvas {
+    display: block;
+    filter: brightness(17%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+}
+
+.header-img{
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  border-radius: 1px;
+  top: 10px;
+  bottom: 30px;
+}
+
+
+.header-img-1{
+  z-index: -3;
+  background: green;
+  transform: rotate(-18deg); /* para browsers sem prefixo */
+  border-top: 6px solid white;
+  right: -190px;
+}
+
+.header-img-2{
+  z-index: -2;
+  background: orange;
+  border-top: 6px solid white;
+}
+
+.header-img-3{
+  z-index: -1;
+  background: violet;
+  border-top: 6px solid white;
+}
+
+#bottom-medium{
+  position: relative;
+}
