@@ -1,3 +1,11 @@
+
+#contacts{
+    height: 27rem;
+    width: 100%;
+    background: #000;
+    padding: 0 0 10px 0 ;
+}
+
 .contacts-subtitle{
   font-size: 1.2rem;
 }
@@ -10,7 +18,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* position: relative; */
 }
+
 
 .social-network:hover{
   box-shadow: 1px 1px 2px 2px var(--color-primary-green);
@@ -38,3 +48,41 @@
   font-size: 22px;
   cursor: pointer;
 }
+
+
+.container-msg-up-github{
+  display: none;
+  background: #090909;
+  height: 4rem;
+  width: 15rem;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  gap: 10px;
+  margin: 30px 10px;
+  position: relative;
+  top: -75px;
+  right: -97px;
+  /* box-shadow: 1px 1px 2px 2px white; */
+}
+
+.container-msg-up-github::after {
+  content: " ";
+  position: absolute;
+  height: 0;
+  width: 0;
+  bottom: -16px;
+  left: 30px;
+  border: medium solid #090909;
+  border-width: 13px 13px 13px 0;
+  border-color: transparent #090909 transparent transparent;
+  /* transform: rotateX(90deg); */
+  rotate: -90deg;
+}
+
+.short-line{
+  width: 30%;
+  height: 1px;
+  }
