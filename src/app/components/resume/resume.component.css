@@ -1,6 +1,7 @@
 #resume{
   padding-top: 8px;
   padding-bottom: 80px;
+  overflow-x: hidden;
 }
 
 .resume-subtitle{
@@ -38,7 +39,7 @@
   width: 190px;
   height: 190px;
   border-radius: 50%;
-  border: 3px double var(--color-secondary-green);
+  border: 3px solid var(--color-secondary-green);
   align-self: baseline;
 
 }

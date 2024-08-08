@@ -7,7 +7,6 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -22,7 +21,7 @@
       const initialLoadSection = document.querySelector('.initial-load');
       setTimeout(() => {
         initialLoadSection.classList.add('show');
-      }, 500); // Adiciona um pequeno atraso para o efeito visual
+      }, 700); // Adiciona um pequeno atraso para o efeito visual
     });
 
     document.addEventListener('scroll', function () {
@@ -33,7 +32,7 @@
         const elementTop = element.getBoundingClientRect().top;
         const elementBottom = element.getBoundingClientRect().bottom;
 
-        if (elementTop < windowHeight - 50) { // 50px antes do elemento estar completamente visível
+        if (elementTop < windowHeight - 45) { // 50px antes do elemento estar completamente visível
           element.classList.add('show');
         } else {
           element.classList.remove('show');

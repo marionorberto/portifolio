@@ -1,13 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { TimelineComponent } from "../timeline/timeline.component";
 
 @Component({
   selector: 'app-certification',
   standalone: true,
   imports: [
     CommonModule,
-    TimelineComponent
 ],
   templateUrl: './certification.component.html',
   styleUrl: './certification.component.css'

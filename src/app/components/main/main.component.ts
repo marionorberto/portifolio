@@ -4,6 +4,7 @@ import { ServicesComponent } from '../services/services.component';
 import { ContactsComponent } from '../contacts/contacts.component';
 import { ResumeComponent } from '../resume/resume.component';
 import { CertificationComponent } from '../certification/certification.component';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-main',
@@ -13,7 +14,8 @@ import { CertificationComponent } from '../certification/certification.component
     ServicesComponent,
     ContactsComponent,
     ResumeComponent,
-    CertificationComponent
+    CertificationComponent,
+    HeaderComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'

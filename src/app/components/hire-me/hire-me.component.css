@@ -1,0 +1,20 @@
+.color-gray-alternative{
+  background: rgb(13, 14, 13);
+}
+
+.container-img-action{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+ul{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.color-gray-customized{
+  color: rgba(170, 170, 170, 100);
+}
