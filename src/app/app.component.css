@@ -1,0 +1,8 @@
+@media (max-width: 640px) {
+
+  body{
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+}
