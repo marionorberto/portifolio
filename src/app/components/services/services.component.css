@@ -26,3 +26,13 @@ p {
   /* box-shadow: 1px 1px 1px 2px white; */
   /* transform: translateY(-14px); */
 }
+
+
+@media (max-width: 640px) {
+
+  .container-skills-first, .container-skills-second {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+  }
+}

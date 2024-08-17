@@ -40,3 +40,25 @@ canvas {
 #bottom-medium{
   position: relative;
 }
+
+
+.nav-responsive{
+  display: none;
+}
+
+
+
+@media (max-width: 640px) {
+
+  #bottom-right, #bottom-left {
+    display: none;
+  }
+
+  #stack{
+    font-size: 300%;
+  }
+
+  .nav-responsive{
+    display: flex;
+}
+}
