@@ -7,15 +7,12 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
 
+</head>
 <body>
   <app-root></app-root>
-
-  <!-- Matrix Effect script -->
+  
   <script src="./assets/scripts/matrix-animation.js"></script>
-
-  <!-- Transistion script -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const initialLoadSection = document.querySelector('.initial-load');
@@ -24,15 +21,22 @@
       }, 700); // Adiciona um pequeno atraso para o efeito visual
     });
 
+    const menuCollapse = document.querySelector('.menu-collapse');
+    const menuResponsive = document.querySelector('.menu-responsive');
+
+    menuCollapse.addEventListener('click', (event) => {
+      menuResponsive.classList.toggle('dispose-menu');  
+    });
+
     document.addEventListener('scroll', function () {
       const elements = document.querySelectorAll('.scroll-element');
       const windowHeight = window.innerHeight;
 
       elements.forEach(element => {
+
         const elementTop = element.getBoundingClientRect().top;
         const elementBottom = element.getBoundingClientRect().bottom;
-
-        if (elementTop < windowHeight - 45) { // 50px antes do elemento estar completamente visível
+        if (elementTop < windowHeight - 35) { // 50px antes do elemento estar completamente visível
           element.classList.add('show');
         } else {
           element.classList.remove('show');
@@ -42,8 +46,11 @@
           element.classList.remove('show');
         }
       });
-    });
+});
+
+
   </script>
+
 </body>
 
 </html>

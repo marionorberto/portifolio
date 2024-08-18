@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
   font-family: 'Roboto-Medium';
   src: url('./assets/fonts/Roboto-Medium.ttf');
@@ -22,12 +21,12 @@
   --color-secondary-green: rgb(21, 79, 25);
 }
 
+
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
 body{
   background-color: var(--bg-primary);
   font-family: 'Roboto-Medium';
@@ -35,24 +34,19 @@ body{
   max-width: 100vw;
   overflow-x: hidden;
 }
-
 .color-primary-green{
   color: var(--color-primary-green);
 }
-
 .color-secondary-green{
   color: var(--color-secondary-green);
 }
-
 a{
   text-decoration: none;
   color: white;
 }
-
 li{
   list-style: none;
 }
-
 nav {
     display: flex;
     justify-content: space-around;
@@ -61,21 +55,18 @@ nav {
     background-color: transparent;
     font-weight: 200;
 }
-
 ul{
     display: flex;
     gap: 15px;
 }
-
 li {
     list-style: none;
     font-family: 'Roboto-Light';
     position: relative;
 }
 li>a:hover{
-     color: var(--color-primary-green);
+    color: var(--color-primary-green);
 }
-
 .nav-link::before{
     position: absolute;
     content: '';
@@ -88,54 +79,37 @@ li>a:hover{
     transform-origin: right;
     transition: all 0.4s ;
 }
-
 .nav-link:hover::before{
     transition: all 0.4s;
     scale: 1;
 }
-
 .hire-me{
     padding: 6px 6px;
     background-color: #000;
     outline: 1px solid #fff;
-    /* border-radius: 2px; */
     cursor: pointer;
     transition: ease-in-out 0.5s;
 }
-
 .hire-me:hover{
-  box-shadow: 1px 1px 3px 5px var(--color-primary-green);
+    box-shadow: 1px 1px 3px 5px var(--color-primary-green);
 }
-
 .hire-me:active{
     transform: scale(0.98);
     outline-color: rgb(21, 79, 25) ;
     color: rgb(113, 157, 116);
 }
-
-
-
-
-
-
-
-
-
-
 section{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
 #stack{
     text-align: center;
     font-size: 2.6rem;
     margin-top: 18px;
     line-height: 48px;
 }
-
 #text-stack{
     font-size: 13px;
     display: flex;
@@ -146,7 +120,6 @@ section{
     font-family: 'Roboto-Light';
     font-weight: lighter;
 }
-
 #bottom{
     display: flex;
     justify-content: center;
@@ -156,7 +129,6 @@ section{
     font-size: 2.2rem;
     color: rgb(225, 225, 225);
 }
-
 #bottom-left{
     display: flex;
     align-items: end;
@@ -164,7 +136,6 @@ section{
     font-family: 'Roboto-Light';
     margin-right: 50px;
 }
-
 #bottom-right{
     display: flex;
     align-items: end;
@@ -177,69 +148,55 @@ header{
     height: 42rem;
     transition: ease-out 2s;
 }
-
 main{
     padding: 20px 0;
 }
-
 #works{
 
     width: 100%;
     background: #090909;
 }
-
 #works>h1{
     text-align: center;
     margin: 5px 0;
 }
-
 #works>h4{
     font-family: 'Roboto-Light';
     text-align: center;
     color: rgb(113, 157, 116);
 }
-
 .project{
     height: 200px;
     width: 200px;
     background-color: white;
 }
-
-
 #services{
     width: 100%;
     background: #000;
 }
-
 #resume{
     width: 100%;
     background: #090909;
 }
-
-
 .div-projects{
     margin: 20px auto;
     display: grid;
     grid-template-columns: auto;
 }
-
 .first-text-main{
     text-align: center;
     margin: 50px 0 2px 0;
     font-size: 2.5rem;
 }
-
 .second-text-main{
     font-family: 'Roboto-Light';
     text-align: center;
     color: rgb(113, 157, 116);
     margin-bottom: 50px;
 }
-
 .div-skill{
     text-align: center;
 }
-
 .container-skills{
     display: flex;
     flex-direction: column;
@@ -248,7 +205,6 @@ main{
     gap: 40px;
     padding: 0 40px 0 40px;
 }
-
 .container-skills-first{
     display: flex;
     gap: 40px;
@@ -262,40 +218,49 @@ main{
     justify-content: center;
     align-items: center;
 }
-
-
-/* Transition code: */
-@media(prefers-reduced-motion) {
-  .hidden{
-    transition: none;
-  }
-}
-
 .scroll-element, .initial-load {
     opacity: 0;
     filter: blur(70px);
     transition: all 1s ease-in-out;
-  }
-
+}
 .left-to-right {
     transform: translateX(-100%);
 }
-
 .right-to-left {
     transform: translateX(100%);
 }
-
 .bottom-to-top, .initial-load {
     transform: translateY(100%);
 }
-
 .scroll-element.show, .initial-load.show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
 }
-
 .bottom-to-top.show, .initial-load.show {
     transform: translateY(0);
 }
+.dispose-menu{
+    display: flex;
+}
 
+
+@media not all and (min-width: 640px) {
+    #stack {
+        font-size: 1.4px;
+    }
+}
+@media(prefers-reduced-motion) {
+    .scroll-element{
+      transition: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .scroll-element {
+        opacity: 1; 
+        filter: blur(0);
+        transform: none; 
+        transition: none; 
+    }
+} 

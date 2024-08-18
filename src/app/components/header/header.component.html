@@ -1,29 +1,52 @@
 <header>
-  <div class="flex justify-between items-center p-4 nav-responsive">
+  <div class="relative flex justify-between items-center p-4 nav-responsive">
     <a href="#">
       <h1 class="text-2xl">n<span style="color:  rgb(138, 136, 136); font-size: larger;">o</span>rb<span
           style="color: rgb(75, 74, 74); font-size: xx-large;">.</span></h1>
     </a>
     <div>
-      <i class="bi bi-list px-2 py-[2px] border-2 border-white text-2xl"></i>
+      <i class="menu-collapse border-zinc-300 text-2xl hire-me bi bi-list px-2 py-[2px] border-2"></i>
     </div>
+
+    <ul class="hidden menu-responsive max-sm:text-sm flex-col items-center justify-center gap-1 font-serif w-full bg-zinc-950 absolute mt-16 top-0 left-0 z-50">  
+      <li class="border-b-[1px] border-zinc-900 w-full text-center p-2">
+        <a class="text-zinc-700 text-lg " href="#works">Works</a>
+      </li>
+      <li class="border-b-[1px] border-zinc-900 w-full text-center p-2">
+        <a class="text-zinc-700 opacity-50 text-lg" href="#services">Services</a>
+      </li>
+      <li class="border-b-[1px] border-zinc-900 w-full text-center p-2">
+        <a class="text-zinc-700 opacity-50 text-lg" href="#resume">Resume</a>
+      </li>
+      <li class="border-b-[1px] border-zinc-900 w-full text-center p-2">
+        <a class="text-zinc-700 opacity-50 text-lg" href="#contacts">Contacts</a>
+      </li>
+      <li class="border-b-[1px] border-zinc-900 w-full text-center p-2">
+        <a class="text-zinc-700 opacity-50 text-lg" href="hire">Hire Me</a>
+      </li>
+      <select class="bg-transparent text-zinc-600 me-auto p-3 text-xl" name="language" id="language">
+        <option value="EN" class="text-xl bg-slate-800">🇺🇸 US</option>
+        <option value="PT" class="text-xl bg-slate-800">🇵🇹 PT</option>
+      </select>
+    </ul>
   </div>
   <app-nav></app-nav>
   <canvas>
   </canvas>
 
   <section class="initial-load">
-    <div id="stack">
+    <div id="stack" class="max-sm:text-[15px]">
       <h1>FULL</h1>
       <h1>STACK</h1>
       <h1>DEVELOPER <span style=" color:rgb(113, 157, 116); font-size: xx-large;">.</span></h1>
     </div>
     <div id="text-stack">
-      <div><span style="color: rgb(75, 74, 74); font-size: large;">"</span> I'm always passionated to make
-        inovation <br> and impact my community with tecnology. <span
+      <div class="max-sm:text-[11px]">
+        <span style="color: rgb(75, 74, 74); font-size: large;">"</span> I'm always passionated to make
+        inovation <br class="max-sm:hidden"> and impact my community <br class="max-sm:hidden"> with tecnology. <span
           style="color: rgb(75, 74, 74); font-size: large;">"</span>
       </div>
-      <div><span class="max-sm:text-justify max-sm:text-[12px] max-sm:leading-3"
+      <div class="max-sm:text-[11px]"><span class="max-sm:text-justify max-sm:text-[11px] max-sm:leading-3"
           style="color: rgb(75, 74, 74); font-size: normal;"># coding's</span> a lifestyle 🖊️</div>
     </div>
     <div id="bottom">
@@ -32,9 +55,6 @@
       </div>
       <div id="bottom-medium">
         IMAGE
-        <!-- <div class="header-img header-img-1"></div>
-        <div class="header-img header-img-2"></div>
-        <div class="header-img header-img-3"></div> -->
       </div>
       <div id="bottom-right">
         <span>NORBERTO</span>

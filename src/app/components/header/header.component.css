@@ -1,13 +1,13 @@
 canvas {
-    display: block;
-    filter: brightness(17%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1000;
+  display: block;
+  filter: brightness(17%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1000;
 }
 
-.header-img{
+.header-img {
   height: 20rem;
   width: 20rem;
   position: absolute;
@@ -16,8 +16,7 @@ canvas {
   bottom: 30px;
 }
 
-
-.header-img-1{
+.header-img-1 {
   z-index: -3;
   background: green;
   transform: rotate(-18deg); /* para browsers sem prefixo */
@@ -25,40 +24,47 @@ canvas {
   right: -190px;
 }
 
-.header-img-2{
+.header-img-2 {
   z-index: -2;
   background: orange;
   border-top: 6px solid white;
 }
 
-.header-img-3{
+.header-img-3 {
   z-index: -1;
   background: violet;
   border-top: 6px solid white;
 }
 
-#bottom-medium{
+#bottom-medium {
   position: relative;
 }
 
-
-.nav-responsive{
+.nav-responsive {
   display: none;
 }
 
-
-
-@media (max-width: 640px) {
-
-  #bottom-right, #bottom-left {
+@media (min-width: 640px) {
+  .menu-responsive {
     display: none;
   }
+}
 
-  #stack{
-    font-size: 300%;
+@media (max-width: 640px) {
+  #bottom-right,
+  #bottom-left {
+    display: none;
   }
-
-  .nav-responsive{
+  #stack {
+    font-size: 260%;
+  }
+  .nav-responsive {
     display: flex;
+  }
 }
+
+.menu-responsive{
+  z-index: 30;
+  transition: 0.4s ease-in;
 }
+

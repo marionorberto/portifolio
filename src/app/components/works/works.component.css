@@ -68,8 +68,6 @@
   padding-top: 9px;
 }
 
-.latest-project-section-2{}
-
 .container-web-projects
 {
   display: flex;
@@ -84,81 +82,6 @@
   border-radius: 4px;
   background-color: #000;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
-.first-container-project, .forth-container-project{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 42px;
-}
-
-.third-container-project{
-  display: flex;
-  justify-content: space-around;
-  gap: 60px;
-}
-
-.project-1{
-
-}
-
- .project-2, .project-7, .project-8{
-  height: 31rem;
-  background: #000;
-  width: 28rem;
-  border-radius: 4px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.project-3{
-  height: 24rem;
-  background: transparent;
-  width: 100%;
-  border-radius: 4px;
-}
-
-video{
-  height: 24rem;
-  background: #000;
-  width: 100%;
-  border-radius: 4px;
-  box-shadow: 1px 1px 2px 5px #000;
-}
-
-.project-4 , .project-5, .project-6{
-  height: 29rem;
-  background: #000;
-  width: 25rem;
-  border-radius: 4px;
-  padding: 30px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-} */
-
-
-/* .project-4 img , .project-5 img, .project-6 img{
-  height: 10rem;
-  width: 10rem;
-} */
-
 .container-git-languages-stats{
   display: flex;
   justify-content: start;
@@ -216,4 +139,16 @@ video{
   cursor: pointer;
 }
 
+@media not all and (min-width: 640px) {
+  .video-1{
+    width: 44rem;
+    height: 8rem;
+  }
+ .container-projects{
+   width: 98%; 
+ }
+ .web-lastest-video-1{
+  height: 70%;
+ }
+}
 
