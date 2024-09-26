@@ -1,16 +1,16 @@
 p {
-  font-family: 'Roboto-Light';
+  font-family: "Roboto-Light";
 }
 
-#services{
+#services {
   padding-bottom: 140px;
 }
 
-.services-subtitle{
+.services-subtitle {
   font-size: 1.2rem;
 }
 
-.div-skill{
+.div-skill {
   transition: ease-in-out 0.7s;
   padding: 15px 12px;
   display: flex;
@@ -19,20 +19,10 @@ p {
   align-items: center;
 }
 
-.div-skill:hover{
+.div-skill:hover {
   /* border: 3px solid var(--color-primary-green); */
   /* border-style: dashed; */
   background: rgb(39, 71, 39);
   /* box-shadow: 1px 1px 1px 2px white; */
   /* transform: translateY(-14px); */
-}
-
-
-@media (max-width: 640px) {
-
-  .container-skills-first, .container-skills-second {
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-  }
 }

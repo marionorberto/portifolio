@@ -1,64 +1,270 @@
-<header>
-  <div class="relative flex justify-between items-center p-4 nav-responsive">
-    <a href="#">
-      <h1 class="text-2xl">n<span style="color:  rgb(138, 136, 136); font-size: larger;">o</span>rb<span
-          style="color: rgb(75, 74, 74); font-size: xx-large;">.</span></h1>
-    </a>
-    <div>
-      <i class="menu-collapse border-zinc-300 text-2xl hire-me bi bi-list px-2 py-[2px] border-2"></i>
-    </div>
-
-    <ul class="hidden menu-responsive max-sm:text-sm flex-col items-center justify-center gap-1 font-serif w-full bg-zinc-950 absolute mt-16 top-0 left-0 z-50">  
-      <li class="border-b-[1px] border-zinc-900 w-full text-center p-2">
-        <a class="text-zinc-700 text-lg " href="#works">Works</a>
+<header
+  class="relative flex flex-col justify-stretch items-center bg-black overflow-hidden"
+>
+  <nav
+    class="rounded-md border-zinc-800 p-[6px] bg-opacity-75 px-5 flex justify-around items-center border-[1px] bg-black w-[60%] mt-4 hover:shadow-sm hover:shadow-[var(--color-primary-green)]"
+  >
+    <a href="#" class="opacity-90 rounded-lg color-primary-green"
+      ><span><</span>marionorberto <span>/></span></a
+    >
+    <ul class="flex justify-center items-center gap-2">
+      <li>
+        <a href="/#works" class="text-neutral-700 opacity-90"
+          >Projects <span class="opacity-50">/</span></a
+        >
       </li>
-      <li class="border-b-[1px] border-zinc-900 w-full text-center p-2">
-        <a class="text-zinc-700 opacity-50 text-lg" href="#services">Services</a>
+      <li>
+        <a href="/#resume" class="text-neutral-700 opacity-90"
+          >Resume <span class="opacity-50">/</span></a
+        >
       </li>
-      <li class="border-b-[1px] border-zinc-900 w-full text-center p-2">
-        <a class="text-zinc-700 opacity-50 text-lg" href="#resume">Resume</a>
+      <li>
+        <a href="/#services" class="text-neutral-700 opacity-90"
+          >Services <span class="opacity-50">/</span></a
+        >
       </li>
-      <li class="border-b-[1px] border-zinc-900 w-full text-center p-2">
-        <a class="text-zinc-700 opacity-50 text-lg" href="#contacts">Contacts</a>
+      <li>
+        <a href="/#contacts" class="text-neutral-700 opacity-90">Contacts</a>
       </li>
-      <li class="border-b-[1px] border-zinc-900 w-full text-center p-2">
-        <a class="text-zinc-700 opacity-50 text-lg" href="hire">Hire Me</a>
-      </li>
-      <select class="bg-transparent text-zinc-600 me-auto p-3 text-xl" name="language" id="language">
-        <option value="EN" class="text-xl bg-slate-800">🇺🇸 US</option>
-        <option value="PT" class="text-xl bg-slate-800">🇵🇹 PT</option>
-      </select>
     </ul>
-  </div>
-  <app-nav></app-nav>
-  <canvas>
-  </canvas>
+    <a
+      routerLink="/hire"
+      class="opacity-75 color-primary-green text-[15px] hover:bg-zinc-900 rounded-md py-[2px] px-2 border-[1px] border-zinc-800"
+      >Hire Me</a
+    >
+  </nav>
+  <div
+    class="opacity-40 absolute -bottom-72 z-10 bg-neutral-950 w-[28rem] h-[28rem] rounded-full"
+  >
+    <a href="https://linkedin-com/in/marionorberto">
+      <i
+        class="absolute top-10 left-14 h-8 w-8 bg-black flex justify-center items-center rounded-md cursor-pointer bi bi-linkedin"
+      ></i>
+    </a>
+    <a href="https://github.com/marionorberto">
+      <i
+        class="absolute top-5 right-16 h-8 w-8 bg-black flex justify-center items-center rounded-md cursor-pointer bi bi-github"
+      ></i>
+    </a>
 
-  <section class="initial-load">
-    <div id="stack" class="max-sm:text-[15px]">
-      <h1>FULL</h1>
-      <h1>STACK</h1>
-      <h1>DEVELOPER <span style=" color:rgb(113, 157, 116); font-size: xx-large;">.</span></h1>
+    <img
+      class="absolute top-14 right-1/2 h-11 w-11 bg-black flex justify-center items-center rounded-md bi bi-github"
+      src="../../../assets/images/-2.jpg"
+      alt=""
+    />
+
+    <img
+      class="absolute top-24 right-24 h-11 w-11 bg-black flex justify-center items-center rounded-md bi bi-github"
+      src="../../../assets/images/-1.JPG"
+      alt=""
+    />
+  </div>
+
+  <!-- <div
+    class="opacity-60 absolute -bottom-52 z-20 bg-orange-950 w-80 h-80 rounded-full"
+  >
+    <div class="relative">
+      <span
+        class="absolute bottom-full h-8 w-8 bg-black flex justify-center items-center rounded-md cursor-pointer"
+      >
+        <i class="bi bi-github"></i>
+      </span>
+      <span
+        class="absolute right-0 bottom-0 h-8 w-8 bg-black flex justify-center items-center rounded-md cursor-pointer"
+      >
+        <i class="bi bi-linkedin"></i>
+      </span>
     </div>
-    <div id="text-stack">
-      <div class="max-sm:text-[11px]">
-        <span style="color: rgb(75, 74, 74); font-size: large;">"</span> I'm always passionated to make
-        inovation <br class="max-sm:hidden"> and impact my community <br class="max-sm:hidden"> with tecnology. <span
-          style="color: rgb(75, 74, 74); font-size: large;">"</span>
+  </div> -->
+
+  <div
+    class="p-3 absolute left-8 bottom-10 border-neutral-900 border-[1px] rounded-md h-60 w-72 bg-black"
+  >
+    <span class="text-sm font-extralight text-neutral-600">Frontend</span>
+    <div class="flex gap-1 mt-4">
+      <div
+        class="p-1 text-[12px] h-14 w-20 rounded-md border-[1px] border-neutral-900 text-neutral-600 flex justify-center items-center"
+      >
+        Angular
       </div>
-      <div class="max-sm:text-[11px]"><span class="max-sm:text-justify max-sm:text-[11px] max-sm:leading-3"
-          style="color: rgb(75, 74, 74); font-size: normal;"># coding's</span> a lifestyle 🖊️</div>
+      <div
+        class="p-1 text-[12px] h-14 w-20 rounded-md border-[1px] border-neutral-900 text-neutral-600 flex justify-center items-center"
+      >
+        NextJS
+      </div>
+      <div
+        class="p-1 text-[12px] h-14 w-20 rounded-md border-[1px] border-neutral-900 text-neutral-600 flex justify-center items-center"
+      >
+        Tailwind
+      </div>
+      <div
+        class="p-1 text-[12px] h-14 w-20 rounded-md border-[1px] border-neutral-900 text-neutral-600 flex justify-center items-center"
+      >
+        Bootstrap
+      </div>
+      <div class="text-sm flex justify-center items-center text-neutral-600">
+        +3
+      </div>
     </div>
-    <div id="bottom">
-      <div id="bottom-left">
-        <span>MÁRIO</span>
+    <div
+      class="text-sm bg-neutral-950 opacity-80 p-3 flex flex-col justify-start items-stretch rounded-md mt-3 w-24"
+    >
+      <span>Projects</span>
+      <h2>+11</h2>
+    </div>
+  </div>
+
+  <div
+    class="p-3 absolute right-8 bottom-28 border-neutral-900 border-[1px] rounded-md h-60 w-72 bg-black"
+  >
+    <span class="text-sm font-extralight text-neutral-600">Backend</span>
+    <div class="flex gap-1 mt-4">
+      <div
+        class="p-1 text-[12px] h-14 w-20 rounded-md border-[1px] border-neutral-900 text-neutral-600 flex justify-center items-center"
+      >
+        Ts/Js
       </div>
-      <div id="bottom-medium">
-        IMAGE
+      <div
+        class="p-1 text-[12px] h-14 w-20 rounded-md border-[1px] border-neutral-900 text-neutral-600 flex justify-center items-center"
+      >
+        NodeJS
       </div>
-      <div id="bottom-right">
-        <span>NORBERTO</span>
+      <div
+        class="p-1 text-[12px] h-14 w-20 rounded-md border-[1px] border-neutral-900 text-neutral-600 flex justify-center items-center"
+      >
+        NestJS
+      </div>
+      <div
+        class="p-1 text-[12px] h-14 w-20 rounded-md border-[1px] border-neutral-900 text-neutral-600 flex justify-center items-center"
+      >
+        Express
+      </div>
+      <div class="text-sm flex justify-center items-center text-neutral-600">
+        +2
       </div>
     </div>
-  </section>
+    <div
+      class="text-sm bg-neutral-950 opacity-80 p-3 flex flex-col justify-start items-stretch rounded-md mt-3 w-24"
+    >
+      <span>Projects</span>
+      <h2>+9</h2>
+    </div>
+  </div>
+
+  <div class="absolute top-36 grid grid-cols-9 grid-rows-6 opacity-50 z-10">
+    <div
+      class="border-[1px] border-t-0 border-l-0 opacity-5 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-t-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-t-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-t-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-t-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-t-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-t-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-t-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-t-0 border-r-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+
+    <div
+      class="border-[1px] border-l-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] bg-zinc-900 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div
+      class="border-[1px] border-r-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+
+    <div
+      class="border-[1px] border-l-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div
+      class="border-[1px] opacity-35 bg-zinc-900 border-neutral-700 h-16 w-12"
+    ></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div
+      class="border-[1px] border-r-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+
+    <div
+      class="border-[1px] border-l-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div
+      class="border-[1px] opacity-35 bg-zinc-900 border-neutral-700 h-16 w-12"
+    ></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div
+      class="border-[1px] border-r-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+
+    <div
+      class="border-[1px] border-l-0 border-b-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-b-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-b-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-b-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] bg-zinc-900 border-b-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-b-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-b-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-b-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-r-0 border-b-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+  </div>
+
+  <div class="mt-28 z-10">
+    <h1 class="text-7xl">Full Stack</h1>
+    <h2 class="text-4xl">Developer</h2>
+    <div class="mt-3 text-neutral-500">
+      <span class="font-extralight text-[13px]">
+        Building Softwares, Systems Automatization <br />
+        and Enthusiast Pentester.
+      </span>
+    </div>
+  </div>
 </header>

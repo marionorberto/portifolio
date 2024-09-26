@@ -1,182 +1,305 @@
-<section class="w-full mb-20">
-  <section class="w-full px-[40px] pb-10px]">
-    <nav class="flex justify-between px-6 items-baseline w-full max-sm:px-0">
-      <ul class="flex-col items-center justify-center gap-1 font-serif">
-        <li>
-          <a class="color-primary-green opacity-50 text-xl max-sm:text-[16px]" href="#">Home</a>
-        </li>
-        <li>
-          <a class="color-primary-green opacity-50 text-xl max-sm:text-[16px]" href="#works">Works</a>
-        </li>
-        <li>
-          <a class="color-primary-green opacity-50 text-xl max-sm:text-[16px]" href="#services">Services</a>
-        </li>
-        <li>
-          <a class="color-primary-green opacity-50 text-xl max-sm:text-[16px]" href="#resume">Resume</a>
-        </li>
-        <li>
-          <a class="color-primary-green opacity-50 text-xl max-sm:text-[16px]" href="#contacts">Contacts</a>
-        </li>
-        <li class="">
-          <a class="text-4xl color-primary-green underline max-sm:text-[22px]" href="#hire">Hire Me</a>
-        </li>
-      </ul>
-      <div class="">
-        <span class="bg-transparent text-zinc-700 ms-3 text-3xl max-sm:text-2xl">|  </span>
-        <select class="bg-transparent text-zinc-700 text-2xl max-sm:text-lg" name="language" id="language">
-          <option value="EN" class="text-2xl bg-slate-800 max-sm:text-xl">🇺🇸 US</option>
-          <option value="PT" class="text-2xl bg-slate-800 max-sm:text-lg">🇵🇹 PT</option>
-        </select>
-      </div>
-    </nav>
-  </section>
-  <main class="flex justify-center items-center gap-7 px-[40px] py-[40px] w-[80%]">
+<section id="hire-me" class="relative w-full mb-20 pb-44">
+  <i
+    class="absolute top-6 left-48 hover:shadow-sm hover:shadow-[var(--color-primary-green)] py-1 px-3 bi bi-arrow-left bg-neutral-950 text-neutral-600 border-[1px] border-neutral-700 rounded-md cursor-pointer"
+  ></i>
+
+  <i
+    class="absolute top-6 right-48 hover:shadow-sm hover:shadow-[var(--color-primary-green)] py-1 px-3 bi bi-share bg-neutral-950 text-neutral-600 border-[1px] border-neutral-700 rounded-md cursor-pointer"
+  ></i>
+
+  <nav
+    class="rounded-md border-zinc-800 p-[6px] bg-opacity-75 px-5 flex justify-around items-center border-[1px] bg-black w-[60%] mt-5 hover:shadow-sm hover:shadow-[var(--color-primary-green)]"
+  >
+    <a href="/" class="opacity-90 rounded-lg color-primary-green"
+      ><span><</span>marionorberto <span>/></span></a
+    >
+    <ul class="flex justify-center items-center gap-2">
+      <li>
+        <a href="/#works" class="text-neutral-700 opacity-90"
+          >Projects <span class="opacity-50">/</span></a
+        >
+      </li>
+      <li>
+        <a href="/#resume" class="text-neutral-700 opacity-90"
+          >Resume <span class="opacity-50">/</span></a
+        >
+      </li>
+      <li>
+        <a href="/#services" class="text-neutral-700 opacity-90"
+          >Services <span class="opacity-50">/</span></a
+        >
+      </li>
+      <li>
+        <a href="/#contacts" class="text-neutral-700 opacity-90 cursor-pointer"
+          >Contacts</a
+        >
+      </li>
+    </ul>
+    <a
+      routerLink="/hire"
+      class="opacity-75 color-primary-green text-[15px] bg-zinc-900 rounded-md py-[2px] px-2 border-[1px] border-zinc-800 shadow-sm shadow-[var(--color-primary-green)]"
+      >Hire Me</a
+    >
+  </nav>
+  <main
+    class="flex justify-center items-center gap-7 px-[40px] mt-10 py-[40px] w-[80%]"
+  >
     <section class="flex flex-col justify-center items-center gap-3">
-      <div class="bg-neutral-950 max-sm:w-[320px] max-sm:h-[300px] h-[400px] w-[450px] mt-2 rounded-3xl mx-auto shadow-sm shadow-green-200">
-      <!-- <img src="../../../assets/images/hire.JPG" class="max-sm:w-[320px] max-sm:h-[300px] h-[400px] w-[450px] rounded-3xl mx-auto" alt=""> -->
-      </div>
-      <h1 class="text-4xl max-sm:text-3xl font-light text-neutral-200 mt-3">Mário Norberto</h1>
-      <h4 class="italic max-sm:text-sm font-serif text-lg font-light text-neutral-700">Fullstack Developer and Enthusiast hacker</h4>
+      <img
+        src="../../../assets/images/-2.jpg"
+        class="max-sm:w-[320px] max-sm:h-[300px] h-36 w-36 rounded-full mx-auto shadow-md shadow-[var(--color-primary-green)]"
+        alt=""
+      />
+      <h1 class="text-3xl font-light text-neutral-300 mt-3">Mário Norberto</h1>
+      <span class="italic font-serif text-xl font-light text-neutral-700 -m-4">
+        Fullstack Developer
+      </span>
 
-      <div class="network-accounts w-[80%] flex gap-3 justify-center items-center">
-        <i class="bi bi-github text-2xl rounded-lg p-3 bg-zinc-700 text-white cursor-pointer"></i>
-        <i class="bi bi-linkedin text-2xl rounded-lg p-3 bg-blue-700 text-white cursor-pointer"></i>
-        <i class="bi bi-whatsapp text-2xl rounded-lg p-3 bg-green-700 text-white cursor-pointer"></i>
-        <i class="text-2xl rounded-lg p-3 bg-neutral-950 text-white cursor-pointer">M</i>
-        <i class="bi bi-envelope-fill text-2xl rounded-lg p-3 bg-blue-700 text-white cursor-pointer"></i>
-      </div>
-      <div class="flex gap-1">
-        <div
-          class="flex justify-center items-center color-primary-green opacity-85  border-2 border-neutral-800 hover:border-neutral-950 hover:opacity-70 py-1  px-1 rounded-md">
-          <a href="../../../assets/docs/cv - dev 2 - Google Docs.pdf" class="color-primary-green">
-            <span>download cv <i class="bi bi-filetype-pdf "></i></span>
+      <div class="container-contacts mt-5">
+        <div class="flex justify-center items-center gap-4">
+          <a (click)="sendEmail()" target="_blank">
+            <i
+              class="hover:text-[var(--color-primary-green)] text-2xl flex justify-center items-center rounded-md cursor-pointer bi bi-envelope-fill text-neutral-300"
+            ></i>
+          </a>
+          <a href="https://github.com/marionorberto" target="_blank">
+            <i
+              class="hover:text-[var(--color-primary-green)] text-2xl flex justify-center items-center rounded-md cursor-pointer bi bi-github text-neutral-300"
+            ></i>
+          </a>
+          <a href="https://wa.me/935327990" target="_blank">
+            <i
+              class="hover:text-[var(--color-primary-green)] text-2xl flex justify-center items-center rounded-md cursor-pointer bi bi-whatsapp text-neutral-300"
+            ></i>
+          </a>
+          <a href="https://linkedin.com/in/marionorberto" target="_blank">
+            <i
+              class="hover:text-[var(--color-primary-green)] flex justify-center items-center text-2xl rounded-md cursor-pointer bi bi-linkedin text-neutral-300"
+            ></i>
           </a>
         </div>
+      </div>
+
+      <div class="mt-4">
         <div
-          class="flex gap-2 color-primary-green opacity-85  border-2 border-neutral-800 hover:border-neutral-950 hover:opacity-70 py-2 px-2 rounded-md">
-          <a href="https://wa.me/935327990" class="color-primary-green">
-            <span>Work With Me <i class="bi bi-arrow-right"></i></span>
-          </a>
+          class="rounded-md bg-neutral-950 border-[1px] border-neutral-800 py-2 px-14 hover:shadow-sm hover:shadow-[var(--color-primary-green)] cursor-pointer"
+        >
+          <span class="font-light text-neutral-600">Download cv(PDF)</span>
         </div>
       </div>
-      <div class="w-[80%] max-sm:w-[86%] text-center leading-6 text-neutral-700 mt-8 mb-10 text-lg max-sm:text-[13px] max-sm:text-center">
-        <h2 class="text-center">Hello👋🏾! Welcome to my website.</h2>
-        <h4>I've been programming about 2 years profissionally. I'm currently work as a freelancer programmer.</h4>
-        <p>If you need a passionate programmer for developing your website or application, be free to <a
-            href="https://wa.me/935327990" class="color-primary-green opacity-85 underline">get in touch with me.</a>
-          I'm also open to work in your company as a web|Mobile Developer.</p>
-      </div>
-      <div class="w-80% max-sm:w-[108%]">
-        <h1 class="text-neutral-200 text-start text-4xl max-sm:text-3xl">#Projects</h1>
-        <hr class="text-neutral-700">
-        <div class=" w-full p-3 bg-neutral-950">
-          <div class="mb-3">
+
+      <div class="w-78% max-sm:w-[108%] mt-20 rounded-sm">
+        <h1 class="text-neutral-300 text-start text-4xl max-sm:text-3xl mb-1">
+          #Highlighted Projects
+        </h1>
+        <hr class="text-" />
+        <div class="w-full p-3 bg-neutral-950">
+          <div class="mt-2 mb-7 p-3">
             <h3 class="color-primary-green pb-1">TableCoin</h3>
-            <p class="mb-1 max-sm:text-[14px] text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, ipsa! Repellendus maiores
-              veniam officiis
-              voluptas aliquid at harum ipsum natus voluptatem sed, inventore illo, ab similique est consequuntur
-              sapiente aperiam.</p>
-            <div class="flex gap-3 color-primary-green  border-2  border-neutral-800 opacity-80 p-3 px-4 rounded-md max-sm:grid max-sm:grid-cols-4 max-sm:place-items-start">
-              <span class="flex items-center  justify-center gap-1 max-sm:text-[13px]"><i
-                  class="bi bi-square-fill text-[6px]"></i>Javascript</span>
-              <span class="flex items-center  justify-center gap-1 max-sm:text-[13px]"><i
-                  class="bi bi-square-fill text-[6px]"></i>nodejs</span>
+            <p class="mb-1 max-sm:text-[14px] text-justify text-neutral-300">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+              ipsa! Repellendus maiores veniam officiis voluptas aliquid at
+              harum ipsum natus voluptatem sed, inventore illo, ab similique est
+              consequuntur sapiente aperiam.
+            </p>
+            <div
+              class="flex gap-3 color-primary-green border-2 border-neutral-800 opacity-80 p-3 px-4 rounded-md max-sm:grid max-sm:grid-cols-4 max-sm:place-items-start"
+            >
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>Javascript</span
+              >
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>nodejs</span
+              >
 
-              <span class="flex items-center  justify-center gap-1 max-sm:text-[13px]"><i
-                  class="bi bi-square-fill text-[6px]"></i>Angular</span>
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>Angular</span
+              >
 
-              <span class="flex items-center  justify-center gap-1 max-sm:text-[13px]"><i
-                  class="bi bi-square-fill text-[6px]"></i>Tailwing</span>
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>Tailwing</span
+              >
 
-              <span class="flex items-center  justify-center gap-1 max-sm:text-[13px]"><i
-                  class="bi bi-square-fill text-[6px]"></i>css</span>
-              <span class="flex items-center  justify-center gap-1 max-sm:text-[13px]"><i
-                  class="bi bi-square-fill text-[6px]"></i>html</span>
-
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>css</span
+              >
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>html</span
+              >
             </div>
           </div>
-          <div class="mb-3">
+          <div class="mt-2 mb-7 p-3">
             <h3 class="color-primary-green pb-1">TableCoin</h3>
-            <p class="mb-1 max-sm:text-[14px] text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, ipsa! Repellendus maiores
-              veniam officiis
-              voluptas aliquid at harum ipsum natus voluptatem sed, inventore illo, ab similique est consequuntur
-              sapiente aperiam.</p>
-            <div class="flex gap-3 color-primary-green  border-2  border-neutral-800 opacity-80 p-3 px-4 rounded-md max-sm:grid max-sm:grid-cols-4 max-sm:place-items-start">
-              <span class="flex items-center  justify-center gap-1 max-sm:text-[13px]"><i
-                  class="bi bi-square-fill text-[6px]"></i>Javascript</span>
-              <span class="flex items-center  justify-center gap-1 max-sm:text-[13px]"><i
-                  class="bi bi-square-fill text-[6px]"></i>nodejs</span>
+            <p class="mb-1 max-sm:text-[14px] text-justify text-neutral-300">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+              ipsa! Repellendus maiores veniam officiis voluptas aliquid at
+              harum ipsum natus voluptatem sed, inventore illo, ab similique est
+              consequuntur sapiente aperiam.
+            </p>
+            <div
+              class="flex gap-3 color-primary-green border-2 border-neutral-800 opacity-80 p-3 px-4 rounded-md max-sm:grid max-sm:grid-cols-4 max-sm:place-items-start"
+            >
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>Javascript</span
+              >
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>nodejs</span
+              >
 
-              <span class="flex items-center  justify-center gap-1 max-sm:text-[13px]"><i
-                  class="bi bi-square-fill text-[6px]"></i>Angular</span>
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>Angular</span
+              >
 
-              <span class="flex items-center  justify-center gap-1 max-sm:text-[13px]"><i
-                  class="bi bi-square-fill text-[6px]"></i>Tailwing</span>
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>Tailwing</span
+              >
 
-              <span class="flex items-center  justify-center gap-1 max-sm:text-[13px]"><i
-                  class="bi bi-square-fill text-[6px]"></i>css</span>
-              <span class="flex items-center  justify-center gap-1 max-sm:text-[13px]"><i
-                  class="bi bi-square-fill text-[6px]"></i>html</span>
-
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>css</span
+              >
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>html</span
+              >
             </div>
           </div>
-          <div class="mb-3">
+          <div class="mt-2 mb-17 p-3">
             <h3 class="color-primary-green pb-1">TableCoin</h3>
-            <p class="mb-1 max-sm:text-[14px] text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, ipsa! Repellendus maiores
-              veniam officiis
-              voluptas aliquid at harum ipsum natus voluptatem sed, inventore illo, ab similique est consequuntur
-              sapiente aperiam.</p>
-            <div class="flex gap-3 color-primary-green  border-2  border-neutral-800 opacity-80 p-3 px-4 rounded-md max-sm:grid max-sm:grid-cols-4 max-sm:place-items-start">
-              <span class="flex items-center  justify-center gap-1 max-sm:text-[13px]"><i
-                  class="bi bi-square-fill text-[6px]"></i>Javascript</span>
-              <span class="flex items-center  justify-center gap-1 max-sm:text-[13px]"><i
-                  class="bi bi-square-fill text-[6px]"></i>nodejs</span>
+            <p class="mb-1 max-sm:text-[14px] text-justify text-neutral-300">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+              ipsa! Repellendus maiores veniam officiis voluptas aliquid at
+              harum ipsum natus voluptatem sed, inventore illo, ab similique est
+              consequuntur sapiente aperiam.
+            </p>
+            <div
+              class="flex gap-3 color-primary-green border-2 border-neutral-800 opacity-80 p-3 px-4 rounded-md max-sm:grid max-sm:grid-cols-4 max-sm:place-items-start"
+            >
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>Javascript</span
+              >
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>nodejs</span
+              >
 
-              <span class="flex items-center  justify-center gap-1 max-sm:text-[13px]"><i
-                  class="bi bi-square-fill text-[6px]"></i>Angular</span>
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>Angular</span
+              >
 
-              <span class="flex items-center  justify-center gap-1 max-sm:text-[13px]"><i
-                  class="bi bi-square-fill text-[6px]"></i>Tailwing</span>
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>Tailwing</span
+              >
 
-              <span class="flex items-center  justify-center gap-1 max-sm:text-[13px]"><i
-                  class="bi bi-square-fill text-[6px]"></i>css</span>
-              <span class="flex items-center  justify-center gap-1 max-sm:text-[13px]"><i
-                  class="bi bi-square-fill text-[6px]"></i>html</span>
-
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>css</span
+              >
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>html</span
+              >
             </div>
           </div>
-          <a href="#works" class="text-end my-3 underline color-primary-green  max-sm:ms-auto">see more projects <i
-              class="bi bi-link-45deg"></i></a>
+
+          <a
+            href="https://github.com/marionorberto?tab=repositories"
+            target="_blank"
+            class="text-end my-6 underline color-primary-green p-10 ps-4"
+            >See github repository projects<i class="bi bi-link-45deg"></i
+          ></a>
         </div>
       </div>
-      <div class="w-80% mt-10 max-sm:w-[108%]">
-        <h1 class="text-neutral-200 text-start text-4xl max-sm:text-3xl">#Open Source</h1>
-        <hr class="text-neutral-700">
+      <div class="w-80% mt-20 max-sm:w-[108%]">
+        <h1 class="text-neutral-400 text-start text-4xl mb-1 max-sm:text-3xl">
+          #Open Source
+        </h1>
+        <hr class="text-neutral-700" />
         <div class="bg-neutral-950 w-full p-3">
-          <div>
+          <div class="mt-2 mb-7 p-3">
             <h3 class="color-primary-green">TableCoin</h3>
-            <p class="max-sm:text-[14px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, ipsa! Repellendus maiores veniam officiis
-              voluptas aliquid at harum ipsum natus voluptatem sed, inventore illo, ab similique est consequuntur
-              sapiente aperiam.</p>
+            <p class="max-sm:text-[14px] text-zinc-300">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+              ipsa! Repellendus maiores veniam officiis voluptas aliquid at
+              harum ipsum natus voluptatem sed, inventore illo, ab similique est
+              consequuntur sapiente aperiam.
+              <a
+                href="https://github.com/marionorberto?tab=repositories"
+                target="_blank"
+                class="text-end my-6 underline color-primary-green p-10 ps-4"
+                >See github repository projects<i class="bi bi-link-45deg"></i
+              ></a>
+            </p>
           </div>
-          <div>
+          <div class="mb-7 p-3">
             <h3 class="color-primary-green">TableCoin</h3>
-            <p class="max-sm:text-[14px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, ipsa! Repellendus maiores veniam officiis
-              voluptas aliquid at harum ipsum natus voluptatem sed, inventore illo, ab similique est consequuntur
-              sapiente aperiam.</p>
+            <p class="max-sm:text-[14px] text-zinc-300">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+              ipsa! Repellendus maiores veniam officiis voluptas aliquid at
+              harum ipsum natus voluptatem sed, inventore illo, ab similique est
+              consequuntur sapiente aperiam.
+              <a
+                href="https://github.com/marionorberto?tab=repositories"
+                target="_blank"
+                class="text-end my-6 underline color-primary-green p-10 ps-4"
+                >See github repository projects<i class="bi bi-link-45deg"></i
+              ></a>
+            </p>
           </div>
-          <div>
+          <div class="mb-7 p-3">
             <h3 class="color-primary-green">TableCoin</h3>
-            <p class="max-sm:text-[14px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, ipsa! Repellendus maiores veniam officiis
-              voluptas aliquid at harum ipsum natus voluptatem sed, inventore illo, ab similique est consequuntur
-              sapiente aperiam.</p>
+            <p class="max-sm:text-[14px] text-zinc-300">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+              ipsa! Repellendus maiores veniam officiis voluptas aliquid at
+              harum ipsum natus voluptatem sed, inventore illo, ab similique est
+              consequuntur sapiente aperiam.
+              <a
+                href="https://github.com/marionorberto?tab=repositories"
+                target="_blank"
+                class="text-end my-6 underline color-primary-green p-10 ps-4"
+                >See github repository projects<i class="bi bi-link-45deg"></i
+              ></a>
+            </p>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <div class="absolute right-10 bottom-3">
+    <select name="lang" id="lang" class="bg-transparent">
+      <option value="en" class="bg-transparent">EN 🇺🇸</option>
+      <option value="pt" class="bg-transparent">PT 🇵🇹</option>
+    </select>
+  </div>
+  <div
+    class="absolute bottom-10 right-10 flex gap-3 justify-center items-center max-sm:right-6"
+  >
+    <span class="text-zinc-500 go-to-top">Go To Top</span>
+    <a
+      href="/hire#"
+      class="hover:shadow-sm hover:shadow-[var(--color-primary-green)] flex justify-center items-center bg-neutral-950 cursor-pointer text-zinc-500 rounded-full w-[35px] h-[50px]"
+    >
+      <i class="bi bi-chevron-up text-2xl p-3"></i>
+    </a>
+  </div>
 </section>
-<div class="w-[74%] max-sm:text-[11px] bg-neutral-950 italic p-2 mx-auto text-center">
+
+<div
+  class="w-[74%] max-sm:text-[11px] bg-neutral-950 text-neutral-300 italic p-2 mx-auto text-center"
+>
   This website was developer by Mário Norberto
 </div>

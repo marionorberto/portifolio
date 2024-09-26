@@ -1,39 +1,71 @@
-<div id="contacts" class="relative">
-  <h1 class="first-text-main">contacts</h1>
-  <h4 class="second-text-main contacts-subtitle">getting in touch</h4>
-  <div class="container-contacts">
-    <a href="#">
-      <h1 class="text-3xl">n<span style="color:  rgb(138, 136, 136); font-size: larger;">o</span>rb<span
-          style="color: rgb(75, 74, 74); font-size: xx-large;">.</span></h1>
-    </a>
-    <h4 class="text-zinc-400">+244 935-327-990 <i class="bi bi-telephone-fill"></i></h4>
+<div
+  id="contacts"
+  class="relative pb-24 flex flex-col justify-center items-center"
+>
+  <div class="">
+    <h1 class="first-text-main text-4xl">Get In Touch</h1>
+    <h4 class="color-primary-green underline">Contacts</h4>
+  </div>
 
-    <h4 class="text-zinc-400">marionorberto.tech&#64;gmail.com <i class="bi bi-envelope-fill"></i></h4>
-    <div class="container-social-network">
-      <div class="social-network">
-        <a href="https://www.github.com/marionorberto" target="_blank"><i class="social-network bi bi-github"></i></a>
-      </div>
-      <div class="social-network">
-        <a href="https://www.linkedin.com/in/marionorberto/" target="_blank"><i
-            class="social-network bi bi-linkedin"></i></a>
-      </div>
-      <div class="social-network">
-        <a href="https://wa.me/935327990" target="_blank"><i class="social-network bi bi-whatsapp"></i></a>
-      </div>
-      <div class="social-network">
-        <a href="https://web.facebook.com/profile.php?id=100006492960948" target="_blank">
-          <i class="social-network bi bi-facebook"></i>
-        </a>
-      </div>
+  <p-button (onClick)="handleCreatePost(true)" label="Profile"></p-button>
+  <p-dialog
+    [modal]="true"
+    [(visible)]="cardProfileData.visible"
+    [style]="{
+            width: '100%',
+            height: '25rem',
+            marginTop: '60px',
+          }"
+  >
+    <p class="bg-white text-orange-400">adakladkldkammamdm</p>
+  </p-dialog>
+
+  <a
+    routerLink="/hire"
+    class="mt-8 opacity-75 color-primary-green text-[15px] bg-zinc-900 rounded-md py-[6px] px-5 border-[1px] border-zinc-800 shadow-sm shadow-[var(--color-primary-green)]"
+    >Hire Me</a
+  >
+  <div class="container-contacts mt-14">
+    <div class="flex justify-center items-center gap-2">
+      <a (click)="sendEmail()">
+        <i
+          class="text-lg hover:shadow-sm hover:shadow-[var(--color-primary-green)] h-12 w-12 bg-neutral-950 flex justify-center items-center rounded-md cursor-pointer bi bi-envelope-fill"
+        ></i>
+      </a>
+      <a href="https://github.com/marionorberto">
+        <i
+          class="hover:shadow-sm hover:shadow-[var(--color-primary-green)] h-12 w-12 bg-neutral-950 flex justify-center items-center rounded-md cursor-pointer bi bi-github"
+        ></i>
+      </a>
+      <a href="https://wa.me/935327990">
+        <i
+          class="hover:shadow-sm hover:shadow-[var(--color-primary-green)] h-12 w-12 bg-neutral-950 flex justify-center items-center rounded-md cursor-pointer bi bi-whatsapp"
+        ></i>
+      </a>
+      <a href="https://linkedin.com/in/marionorberto">
+        <i
+          class="hover:shadow-sm hover:shadow-[var(--color-primary-green)] h-12 w-12 bg-neutral-950 flex justify-center items-center rounded-md cursor-pointer bi bi-linkedin"
+        ></i>
+      </a>
     </div>
-    <hr class="max-sm:w-[50%] w-[30%] ">
     <h4 class="text-zinc-500">©Copyright All Rights Reserved</h4>
   </div>
-  <div class="absolute bottom-12 right-10 flex gap-3 justify-center items-center max-sm:right-6">
+
+  <div class="absolute right-10 bottom-14">
+    <select name="lang" id="lang" class="bg-transparent">
+      <option value="en" class="bg-transparent">EN 🇺🇸</option>
+      <option value="pt" class="bg-transparent">PT 🇵🇹</option>
+    </select>
+  </div>
+  <div
+    class="absolute bottom-28 right-10 flex gap-3 justify-center items-center max-sm:right-6"
+  >
     <span class="text-zinc-500 go-to-top">Go To Top</span>
-    <a href="#"
-      class="flex justify-center items-center bg-neutral-900 hover:bg-neutral-800 cursor-pointer text-zinc-500 rounded-full w-[35px] h-[50px]">
-      <i class="bi bi-chevron-up text-2xl p-3 "></i>
+    <a
+      href="#"
+      class="hover:shadow-sm hover:shadow-[var(--color-primary-green)] flex justify-center items-center bg-neutral-950 cursor-pointer text-zinc-500 rounded-full w-[35px] h-[50px]"
+    >
+      <i class="bi bi-chevron-up text-2xl p-3"></i>
     </a>
   </div>
 </div>

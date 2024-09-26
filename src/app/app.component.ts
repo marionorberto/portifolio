@@ -1,24 +1,21 @@
-import { Component } from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
-
-import { HeaderComponent } from './components/header/header.component';
-import { MainComponent } from './components/main/main.component';
-import { NavComponent } from './components/nav/nav.component';
-
+import { Component, OnInit } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { PrimeNGConfig } from 'primeng/api';
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
-    RouterLink,
-    RouterLinkActive,
-    HeaderComponent,
-    MainComponent,
-    NavComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'portifolio';
+export class AppComponent implements OnInit {
+  title = 'marionorberto';
+
+   constructor(private primeNgConfig: PrimeNGConfig) {}
+  ngOnInit() {
+    this.primeNgConfig.ripple = true;
+  }
 }
+
