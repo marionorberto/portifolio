@@ -1,14 +1,74 @@
 <section id="hire-me" class="relative w-full mb-20 pb-44">
-  <i
-    class="absolute top-6 left-48 hover:shadow-sm hover:shadow-[var(--color-primary-green)] py-1 px-3 bi bi-arrow-left bg-neutral-950 text-neutral-600 border-[1px] border-neutral-700 rounded-md cursor-pointer"
-  ></i>
+  <a href="/">
+    <i
+      class="absolute top-6 left-48 max-md:left-8 hover:shadow-sm hover:shadow-[var(--color-primary-green)] py-1 px-3 bi bi-arrow-left bg-neutral-950 text-neutral-600 border-[1px] border-neutral-700 rounded-md cursor-pointer max-md:bg-transparent max-md:border-0 max-md:text-2xl max-md:opacity-40 max-md:top-8"
+    ></i>
+  </a>
 
   <i
-    class="absolute top-6 right-48 hover:shadow-sm hover:shadow-[var(--color-primary-green)] py-1 px-3 bi bi-share bg-neutral-950 text-neutral-600 border-[1px] border-neutral-700 rounded-md cursor-pointer"
+    (click)="showMenu()"
+    class="absolute shadow-sm hover:shadow-[var(--color-primary-green)] py-4 px-4 text-xl bi bi-list bg-neutral-950 text-neutral-600 border-[1px] border-neutral-700 rounded-md cursor-pointer hidden max-md:flex max-md:top-6 max-md:right-5"
   ></i>
+
+  <div
+    *ngIf="isMenuShown"
+    class="h-screen absolute top-0 flex flex-col justify-baseline w-full z-40 bg-black"
+  >
+    <div class="w-full h-full relative flex justify-center items-center">
+      <i
+        (click)="isMenuClicked(true)"
+        class="absolute shadow-sm hover:shadow-[var(--color-primary-green)] py-4 px-4 text-xl bi bi-x bg-neutral-950 text-neutral-600 border-[1px] border-neutral-700 rounded-md cursor-pointer hidden max-md:flex max-md:top-6 max-md:right-5 z-50"
+      ></i>
+      <ul class="flex flex-col justify-center items-center gap-2 -mt-56 w-full">
+        <div class="bg-neutral-900 opacity-50 h-[1px] w-full"></div>
+        <li>
+          <a
+            (click)="isMenuClicked(true)"
+            href="/#works"
+            class="text-neutral-700 text-xl opacity-90"
+            >Projects <span class="opacity-50"></span
+          ></a>
+        </li>
+        <div class="bg-neutral-900 opacity-50 h-[1px] w-full"></div>
+        <li>
+          <a
+            (click)="isMenuClicked(true)"
+            href="/#resume"
+            class="text-neutral-700 text-xl opacity-90"
+            >Resume <span class="opacity-50"></span
+          ></a>
+        </li>
+        <div class="bg-neutral-900 opacity-50 h-[1px] w-full"></div>
+        <li>
+          <a
+            (click)="isMenuClicked(true)"
+            href="/#services"
+            class="text-neutral-700 text-xl opacity-90"
+            >Services <span class="opacity-50"></span
+          ></a>
+        </li>
+        <div class="bg-neutral-900 opacity-50 h-[1px] w-full"></div>
+        <li>
+          <a
+            (click)="isMenuClicked(true)"
+            href="/#contacts"
+            class="text-xl text-neutral-700 opacity-90"
+            >Contacts</a
+          >
+        </li>
+        <div class="bg-neutral-900 opacity-50 h-[1px] w-full"></div>
+        <a
+          (click)="isMenuClicked(true)"
+          href="/hire"
+          class="mt-8 opacity-75 color-primary-green text-[15px] bg-zinc-900 rounded-md py-[6px] px-5 border-[1px] border-zinc-800 shadow-sm shadow-[var(--color-primary-green)]"
+          >Hire Me</a
+        >
+      </ul>
+    </div>
+  </div>
 
   <nav
-    class="rounded-md border-zinc-800 p-[6px] bg-opacity-75 px-5 flex justify-around items-center border-[1px] bg-black w-[60%] mt-5 hover:shadow-sm hover:shadow-[var(--color-primary-green)]"
+    class="rounded-md border-zinc-800 p-[6px] bg-opacity-75 px-5 flex justify-around items-center border-[1px] bg-black w-[60%] mt-5 hover:shadow-sm hover:shadow-[var(--color-primary-green)] max-md:hidden"
   >
     <a href="/" class="opacity-90 rounded-lg color-primary-green"
       ><span><</span>marionorberto <span>/></span></a
@@ -42,12 +102,12 @@
     >
   </nav>
   <main
-    class="flex justify-center items-center gap-7 px-[40px] mt-10 py-[40px] w-[80%]"
+    class="flex justify-center items-center gap-7 px-[40px] mt-10 py-[40px] w-[80%] max-md:w-[100%]"
   >
     <section class="flex flex-col justify-center items-center gap-3">
       <img
         src="../../../assets/images/-2.jpg"
-        class="max-sm:w-[320px] max-sm:h-[300px] h-36 w-36 rounded-full mx-auto shadow-md shadow-[var(--color-primary-green)]"
+        class="max-sm:w-[320px] max-sm:h-[300px] h-36 w-36 rounded-full mx-auto shadow-md shadow-[var(--color-primary-green)] max-md:mt-10"
         alt=""
       />
       <h1 class="text-3xl font-light text-neutral-300 mt-3">Mário Norberto</h1>
@@ -84,133 +144,148 @@
         <div
           class="rounded-md bg-neutral-950 border-[1px] border-neutral-800 py-2 px-14 hover:shadow-sm hover:shadow-[var(--color-primary-green)] cursor-pointer"
         >
-          <span class="font-light text-neutral-600">Download cv(PDF)</span>
+          <span class="font-light text-neutral-600 text-nowrap"
+            >Download cv(PDF)</span
+          >
         </div>
       </div>
 
-      <div class="w-78% max-sm:w-[108%] mt-20 rounded-sm">
-        <h1 class="text-neutral-300 text-start text-4xl max-sm:text-3xl mb-1">
+      <div class="w-78% mt-20 rounded-sm max-md:w-[108%] max-md:mt-16">
+        <h1 class="text-white text-start text-4xl max-sm:text-3xl mb-1">
           #Highlighted Projects
         </h1>
         <hr class="text-" />
         <div class="w-full p-3 bg-neutral-950">
           <div class="mt-2 mb-7 p-3">
-            <h3 class="color-primary-green pb-1">TableCoin</h3>
-            <p class="mb-1 max-sm:text-[14px] text-justify text-neutral-300">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-              ipsa! Repellendus maiores veniam officiis voluptas aliquid at
-              harum ipsum natus voluptatem sed, inventore illo, ab similique est
-              consequuntur sapiente aperiam.
+            <h3 class="color-primary-green pb-1">
+              Microservice Communication Library
+            </h3>
+            <p class="mb-1 max-sm:text-[14px] text-justify text-white">
+              <i class="bi bi-exclamation-fill text-red-500"></i>
+              Desenvolvi uma poderosa Library de comunicação entre
+              microservices, projetada para suportar múltiplos protocolos como
+              Kafka e GRPC. A Library oferece funcionalidades avançadas,
+              incluindo auto-discovery de serviços e retries automáticos,
+              garantindo uma comunicação eficiente e resiliente entre
+              microservices. Construída utilizando NestJS, Kafka, e GRPC, a
+              solução foi conteinerizada com Docker, permitindo fácil integração
+              e deployment em ambientes complexos.
             </p>
             <div
-              class="flex gap-3 color-primary-green border-2 border-neutral-800 opacity-80 p-3 px-4 rounded-md max-sm:grid max-sm:grid-cols-4 max-sm:place-items-start"
+              class="flex gap-3 color-primary-green border-2 border-neutral-800 opacity-80 max-md:p-2 p-3 px-4 rounded-md max-md:grid max-md:grid-cols-3 max-md:grid-row-2 max-md:gap-x-3 max-md:place-items-start"
             >
               <span
                 class="flex items-center justify-center gap-1 max-sm:text-[13px]"
-                ><i class="bi bi-square-fill text-[6px]"></i>Javascript</span
+                ><i class="bi bi-square-fill text-[6px]"></i>Typescript</span
               >
               <span
-                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
-                ><i class="bi bi-square-fill text-[6px]"></i>nodejs</span
-              >
-
-              <span
-                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
-                ><i class="bi bi-square-fill text-[6px]"></i>Angular</span
+                class="flex items-center justify-center gap-1 max-md:ms-3 max-md:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>Nodejs</span
               >
 
               <span
                 class="flex items-center justify-center gap-1 max-sm:text-[13px]"
-                ><i class="bi bi-square-fill text-[6px]"></i>Tailwing</span
+                ><i class="bi bi-square-fill text-[6px]"></i>NestJS</span
               >
 
               <span
                 class="flex items-center justify-center gap-1 max-sm:text-[13px]"
-                ><i class="bi bi-square-fill text-[6px]"></i>css</span
+                ><i class="bi bi-square-fill text-[6px]"></i>GRPC</span
+              >
+
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>Kafka</span
               >
               <span
                 class="flex items-center justify-center gap-1 max-sm:text-[13px]"
-                ><i class="bi bi-square-fill text-[6px]"></i>html</span
+                ><i class="bi bi-square-fill text-[6px]"></i>Docker</span
               >
             </div>
           </div>
           <div class="mt-2 mb-7 p-3">
-            <h3 class="color-primary-green pb-1">TableCoin</h3>
-            <p class="mb-1 max-sm:text-[14px] text-justify text-neutral-300">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-              ipsa! Repellendus maiores veniam officiis voluptas aliquid at
-              harum ipsum natus voluptatem sed, inventore illo, ab similique est
-              consequuntur sapiente aperiam.
+            <h3 class="color-primary-green pb-1">Postable RESTAPI</h3>
+            <p class="mb-1 max-sm:text-[14px] text-justify text-white">
+              Desenvolvi uma API RESTful para gerenciamento de postagens. É uma
+              API robusta utilizando NestJS, aplicando arquitetura modular e
+              princípios SOLID para criar endpoints escaláveis e de fácil
+              manutenção para [recursos específicos]. Integrei o TypeORM para
+              gerenciar interações com o banco de dados MySQL, garantindo
+              operações de dados eficientes. Implementei DTOs e validação
+              rigorosa com ‘class-validator’ para manter a integridade dos dados
+              e utilizei ferramentas de autenticação de usuário como JWT.
+              Realizei o deploy da API usando Docker, permitindo consistência de
+              ambientes e processos de CI/CD simplificados.
             </p>
             <div
-              class="flex gap-3 color-primary-green border-2 border-neutral-800 opacity-80 p-3 px-4 rounded-md max-sm:grid max-sm:grid-cols-4 max-sm:place-items-start"
+              class="flex gap-3 color-primary-green border-2 border-neutral-800 opacity-80 p-3 px-4 rounded-md max-md:p-2 max-md:grid max-md:grid-cols-3 max-md:grid-row-2 max-md:gap-x-3 max-md:place-items-start"
             >
               <span
                 class="flex items-center justify-center gap-1 max-sm:text-[13px]"
-                ><i class="bi bi-square-fill text-[6px]"></i>Javascript</span
+                ><i class="bi bi-square-fill text-[6px]"></i>TypeScript</span
               >
               <span
-                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
-                ><i class="bi bi-square-fill text-[6px]"></i>nodejs</span
-              >
-
-              <span
-                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
-                ><i class="bi bi-square-fill text-[6px]"></i>Angular</span
+                class="flex items-center justify-center gap-1 max-md:ms-2 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>NestJS</span
               >
 
               <span
                 class="flex items-center justify-center gap-1 max-sm:text-[13px]"
-                ><i class="bi bi-square-fill text-[6px]"></i>Tailwing</span
+                ><i class="bi bi-square-fill text-[6px]"></i>TypOrm</span
               >
 
               <span
                 class="flex items-center justify-center gap-1 max-sm:text-[13px]"
-                ><i class="bi bi-square-fill text-[6px]"></i>css</span
+                ><i class="bi bi-square-fill text-[6px]"></i>Docker</span
+              >
+
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>MySQL</span
               >
               <span
                 class="flex items-center justify-center gap-1 max-sm:text-[13px]"
-                ><i class="bi bi-square-fill text-[6px]"></i>html</span
+                ><i class="bi bi-square-fill text-[6px]"></i>JWT</span
               >
             </div>
           </div>
           <div class="mt-2 mb-17 p-3">
-            <h3 class="color-primary-green pb-1">TableCoin</h3>
-            <p class="mb-1 max-sm:text-[14px] text-justify text-neutral-300">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-              ipsa! Repellendus maiores veniam officiis voluptas aliquid at
-              harum ipsum natus voluptatem sed, inventore illo, ab similique est
-              consequuntur sapiente aperiam.
+            <h3 class="color-primary-green pb-1">CyberNorb</h3>
+            <p class="mb-1 max-sm:text-[14px] text-justify text-white">
+              Desenvolvi um blog especializado em postagens sobre programação e
+              cibersegurança, utilizando Angular e TypeScript para criar uma
+              interface dinâmica e responsiva. Integrei uma RESTAPI para a
+              criação de postagens, permitindo a gestão eficiente do conteúdo. O
+              design foi aprimorado com CSS e Tailwind para garantir uma
+              experiência de usuário moderna e intuitiva. Além disso, utilizei
+              Chart.js para apresentar visualizações de dados de forma clara e
+              interativa, enriquecendo o conteúdo técnico do blog.
             </p>
             <div
-              class="flex gap-3 color-primary-green border-2 border-neutral-800 opacity-80 p-3 px-4 rounded-md max-sm:grid max-sm:grid-cols-4 max-sm:place-items-start"
+              class="flex gap-3 color-primary-green border-2 border-neutral-800 opacity-80 max-md:p-2 p-3 px-4 rounded-md max-md:grid max-md:grid-cols-3 max-md:grid-row-2 max-md:gap-x-3 max-md:place-items-start"
             >
-              <span
-                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
-                ><i class="bi bi-square-fill text-[6px]"></i>Javascript</span
-              >
-              <span
-                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
-                ><i class="bi bi-square-fill text-[6px]"></i>nodejs</span
-              >
-
               <span
                 class="flex items-center justify-center gap-1 max-sm:text-[13px]"
                 ><i class="bi bi-square-fill text-[6px]"></i>Angular</span
               >
-
               <span
                 class="flex items-center justify-center gap-1 max-sm:text-[13px]"
-                ><i class="bi bi-square-fill text-[6px]"></i>Tailwing</span
+                ><i class="bi bi-square-fill text-[6px]"></i>Tailwind</span
               >
 
               <span
                 class="flex items-center justify-center gap-1 max-sm:text-[13px]"
-                ><i class="bi bi-square-fill text-[6px]"></i>css</span
+                ><i class="bi bi-square-fill text-[6px]"></i>PrimeNG</span
               >
+
               <span
                 class="flex items-center justify-center gap-1 max-sm:text-[13px]"
-                ><i class="bi bi-square-fill text-[6px]"></i>html</span
+                ><i class="bi bi-square-fill text-[6px]"></i>Css</span
+              >
+
+              <span
+                class="flex items-center justify-center gap-1 max-sm:text-[13px]"
+                ><i class="bi bi-square-fill text-[6px]"></i>API</span
               >
             </div>
           </div>
@@ -218,17 +293,21 @@
           <a
             href="https://github.com/marionorberto?tab=repositories"
             target="_blank"
-            class="text-end my-6 underline color-primary-green p-10 ps-4"
-            >See github repository projects<i class="bi bi-link-45deg"></i
+            class="text-end my-6 underline color-primary-green p-10 ps-4 max-md:text-[13px] max-md:text-center"
+            >My github repository projects<i class="bi bi-link-45deg"></i
           ></a>
         </div>
       </div>
-      <div class="w-80% mt-20 max-sm:w-[108%]">
-        <h1 class="text-neutral-400 text-start text-4xl mb-1 max-sm:text-3xl">
-          #Open Source
+      <div class="w-80% mt-20 max-md:w-[108%]">
+        <h1 class="text-white text-start text-4xl mb-1 max-sm:text-3xl">
+          #OpenSource
         </h1>
-        <hr class="text-neutral-700" />
-        <div class="bg-neutral-950 w-full p-3">
+        <hr class="text-neutral-500" />
+        <div class="bg-neutral-950 w-full p-3 max-sm:text-[14px] text-red-400">
+          <i class="bi bi-exclamation-circle-fill text-red-400"></i>
+          My OpenSorce Contribuitions projects is not available yet
+        </div>
+        <!-- <div class="bg-neutral-950 w-full p-3">
           <div class="mt-2 mb-7 p-3">
             <h3 class="color-primary-green">TableCoin</h3>
             <p class="max-sm:text-[14px] text-zinc-300">
@@ -274,7 +353,7 @@
               ></a>
             </p>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
   </main>
@@ -288,7 +367,7 @@
   <div
     class="absolute bottom-10 right-10 flex gap-3 justify-center items-center max-sm:right-6"
   >
-    <span class="text-zinc-500 go-to-top">Go To Top</span>
+    <span class="text-zinc-500 go-to-top max-md:hidden">Go To Top</span>
     <a
       href="/hire#"
       class="hover:shadow-sm hover:shadow-[var(--color-primary-green)] flex justify-center items-center bg-neutral-950 cursor-pointer text-zinc-500 rounded-full w-[35px] h-[50px]"

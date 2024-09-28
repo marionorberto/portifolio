@@ -10,7 +10,6 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ],
   templateUrl: './works.component.html',
-  styleUrl: './works.component.css'
 })
 export class WorksComponent {
 

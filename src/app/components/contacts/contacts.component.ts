@@ -13,22 +13,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './contacts.component.css'
 })
 export class ContactsComponent {
-
-  cardProfileData = {
-    visible: false
-  }
-  date: Date | undefined;
-  members = [
-    { name: 'Amy Elsner', image: 'amyelsner.png', email: 'amy@email.com', role: 'Owner' },
-    { name: 'Bernardo Dominic', image: 'bernardodominic.png', email: 'bernardo@email.com', role: 'Editor' },
-    { name: 'Ioni Bowcher', image: 'ionibowcher.png', email: 'ioni@email.com', role: 'Viewer' }
-  ];
-
-handleCreatePost(value: boolean) {
-  this.cardProfileData.visible = true;
-}
-
-
   sendEmail() {
     const recipient = 'marionorberto2018@gmail.com';
     const subject = 'Hiring Inquiry: Fullstack Developer Position';

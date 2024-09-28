@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
@@ -5,12 +6,25 @@ import { RouterLink } from '@angular/router';
   selector: 'app-hire-me',
   standalone: true,
   imports: [
-    RouterLink
+    RouterLink,
+    CommonModule
   ],
   templateUrl: './hire-me.component.html',
   styleUrl: './hire-me.component.css'
 })
 export class HireMeComponent {
+
+
+  isMenuShown: boolean = false;
+
+  showMenu() {
+    this.isMenuShown = !this.isMenuShown;
+  }
+
+  isMenuClicked(clicked: boolean) {
+    this.isMenuShown = !clicked;
+  }
+
   sendEmail() {
     const recipient = 'marionorberto2018@gmail.com';
     const subject = 'Hiring Inquiry: Fullstack Developer Position';

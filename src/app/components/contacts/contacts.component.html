@@ -3,25 +3,11 @@
   class="relative pb-24 flex flex-col justify-center items-center"
 >
   <div class="">
-    <h1 class="first-text-main text-4xl">Get In Touch</h1>
-    <h4 class="color-primary-green underline">Contacts</h4>
+    <h1 class="first-text-main text-4xl max-md:text-2xl">Get In Touch</h1>
+    <h4 class="color-primary-green underline max-md:text-sm">Contacts</h4>
   </div>
-
-  <p-button (onClick)="handleCreatePost(true)" label="Profile"></p-button>
-  <p-dialog
-    [modal]="true"
-    [(visible)]="cardProfileData.visible"
-    [style]="{
-            width: '100%',
-            height: '25rem',
-            marginTop: '60px',
-          }"
-  >
-    <p class="bg-white text-orange-400">adakladkldkammamdm</p>
-  </p-dialog>
-
   <a
-    routerLink="/hire"
+    href="/hire"
     class="mt-8 opacity-75 color-primary-green text-[15px] bg-zinc-900 rounded-md py-[6px] px-5 border-[1px] border-zinc-800 shadow-sm shadow-[var(--color-primary-green)]"
     >Hire Me</a
   >
@@ -51,16 +37,16 @@
     <h4 class="text-zinc-500">©Copyright All Rights Reserved</h4>
   </div>
 
-  <div class="absolute right-10 bottom-14">
+  <div class="absolute right-10 bottom-14 max-md:right-5">
     <select name="lang" id="lang" class="bg-transparent">
       <option value="en" class="bg-transparent">EN 🇺🇸</option>
       <option value="pt" class="bg-transparent">PT 🇵🇹</option>
     </select>
   </div>
   <div
-    class="absolute bottom-28 right-10 flex gap-3 justify-center items-center max-sm:right-6"
+    class="absolute bottom-28 right-10 max-md:bottom-20 max-md:right-5 flex gap-3 justify-center items-center max-sm:right-6"
   >
-    <span class="text-zinc-500 go-to-top">Go To Top</span>
+    <span class="text-zinc-500 go-to-top max-md:hidden">Go To Top</span>
     <a
       href="#"
       class="hover:shadow-sm hover:shadow-[var(--color-primary-green)] flex justify-center items-center bg-neutral-950 cursor-pointer text-zinc-500 rounded-full w-[35px] h-[50px]"

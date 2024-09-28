@@ -10,7 +10,6 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   templateUrl: './single-video-project.component.html',
-  styleUrl: './single-video-project.component.css'
 })
 export class SingleVideoProjectComponent {
 

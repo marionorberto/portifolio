@@ -1,8 +1,69 @@
 <header
   class="relative flex flex-col justify-stretch items-center bg-black overflow-hidden"
 >
+  <div
+    *ngIf="isMenuShown"
+    class="absolute bottom-0 flex flex-col justify-baseline w-full h-full z-40 bg-black"
+  >
+    <div class="w-full h-full relative flex justify-center items-center">
+      <i
+        (click)="isMenuClicked(true)"
+        class="absolute shadow-sm hover:shadow-[var(--color-primary-green)] py-4 px-4 text-xl bi bi-x bg-neutral-950 text-neutral-600 border-[1px] border-neutral-700 rounded-md cursor-pointer hidden max-md:flex max-md:top-6 max-md:right-5 z-50"
+      ></i>
+      <ul class="flex flex-col justify-center items-center gap-2 -mt-56 w-full">
+        <div class="bg-neutral-900 opacity-50 h-[1px] w-full"></div>
+        <li>
+          <a
+            (click)="isMenuClicked(true)"
+            href="/#works"
+            class="text-neutral-700 text-xl opacity-90"
+            >Projects <span class="opacity-50"></span
+          ></a>
+        </li>
+        <div class="bg-neutral-900 opacity-50 h-[1px] w-full"></div>
+        <li>
+          <a
+            (click)="isMenuClicked(true)"
+            href="/#resume"
+            class="text-neutral-700 text-xl opacity-90"
+            >Resume <span class="opacity-50"></span
+          ></a>
+        </li>
+        <div class="bg-neutral-900 opacity-50 h-[1px] w-full"></div>
+        <li>
+          <a
+            (click)="isMenuClicked(true)"
+            href="/#services"
+            class="text-neutral-700 text-xl opacity-90"
+            >Services <span class="opacity-50"></span
+          ></a>
+        </li>
+        <div class="bg-neutral-900 opacity-50 h-[1px] w-full"></div>
+        <li>
+          <a
+            (click)="isMenuClicked(true)"
+            href="/#contacts"
+            class="text-xl text-neutral-700 opacity-90"
+            >Contacts</a
+          >
+        </li>
+        <div class="bg-neutral-900 opacity-50 h-[1px] w-full"></div>
+        <a
+          (click)="isMenuClicked(true)"
+          href="/hire"
+          class="mt-8 opacity-75 color-primary-green text-[15px] bg-zinc-900 rounded-md py-[6px] px-5 border-[1px] border-zinc-800 shadow-sm shadow-[var(--color-primary-green)]"
+          >Hire Me</a
+        >
+      </ul>
+    </div>
+  </div>
+  <i
+    (click)="showMenu()"
+    class="absolute shadow-sm hover:shadow-[var(--color-primary-green)] py-4 px-4 text-xl bi bi-list bg-neutral-950 text-neutral-600 border-[1px] border-neutral-700 rounded-md cursor-pointer hidden max-md:flex max-md:top-6 max-md:right-5"
+  ></i>
+
   <nav
-    class="rounded-md border-zinc-800 p-[6px] bg-opacity-75 px-5 flex justify-around items-center border-[1px] bg-black w-[60%] mt-4 hover:shadow-sm hover:shadow-[var(--color-primary-green)]"
+    class="max-md:hidden rounded-md border-zinc-800 p-[6px] bg-opacity-90 px-5 flex justify-around items-center border-[1px] bg-black w-[60%] mt-4 hover:shadow-sm hover:shadow-[var(--color-primary-green)]"
   >
     <a href="#" class="opacity-90 rounded-lg color-primary-green"
       ><span><</span>marionorberto <span>/></span></a
@@ -59,26 +120,8 @@
       alt=""
     />
   </div>
-
-  <!-- <div
-    class="opacity-60 absolute -bottom-52 z-20 bg-orange-950 w-80 h-80 rounded-full"
-  >
-    <div class="relative">
-      <span
-        class="absolute bottom-full h-8 w-8 bg-black flex justify-center items-center rounded-md cursor-pointer"
-      >
-        <i class="bi bi-github"></i>
-      </span>
-      <span
-        class="absolute right-0 bottom-0 h-8 w-8 bg-black flex justify-center items-center rounded-md cursor-pointer"
-      >
-        <i class="bi bi-linkedin"></i>
-      </span>
-    </div>
-  </div> -->
-
   <div
-    class="p-3 absolute left-8 bottom-10 border-neutral-900 border-[1px] rounded-md h-60 w-72 bg-black"
+    class="max-md:hidden p-3 absolute left-8 bottom-10 border-neutral-900 border-[1px] rounded-md h-60 w-72 bg-black"
   >
     <span class="text-sm font-extralight text-neutral-600">Frontend</span>
     <div class="flex gap-1 mt-4">
@@ -115,7 +158,7 @@
   </div>
 
   <div
-    class="p-3 absolute right-8 bottom-28 border-neutral-900 border-[1px] rounded-md h-60 w-72 bg-black"
+    class="max-md:hidden p-3 absolute right-8 bottom-28 border-neutral-900 border-[1px] rounded-md h-60 w-72 bg-black"
   >
     <span class="text-sm font-extralight text-neutral-600">Backend</span>
     <div class="flex gap-1 mt-4">
@@ -151,7 +194,9 @@
     </div>
   </div>
 
-  <div class="absolute top-36 grid grid-cols-9 grid-rows-6 opacity-50 z-10">
+  <div
+    class="absolute top-36 grid grid-cols-9 grid-rows-6 max-md:opacity-30 opacity-50 z-10"
+  >
     <div
       class="border-[1px] border-t-0 border-l-0 opacity-5 border-neutral-700 h-16 w-12"
     ></div>
@@ -257,11 +302,11 @@
     ></div>
   </div>
 
-  <div class="mt-28 z-10">
-    <h1 class="text-7xl">Full Stack</h1>
+  <div class="mt-28 z-10 max-md:mt-44">
+    <h1 class="text-7xl max-md:text-6xl">Full Stack</h1>
     <h2 class="text-4xl">Developer</h2>
     <div class="mt-3 text-neutral-500">
-      <span class="font-extralight text-[13px]">
+      <span class="font-extralight text-[13px] max-md:text-[11px]">
         Building Softwares, Systems Automatization <br />
         and Enthusiast Pentester.
       </span>
