@@ -3,11 +3,6 @@
   class="relative flex flex-col justify-stretch items-center pt-10 pb-32"
   style="background: #090909"
 >
-  <a
-    routerLink=""
-    class="absolute bottom-5 right-6 cursor-pointer color-primary-green"
-    >See more <i class="bi bi-arrow-right"></i
-  ></a>
   <div class="mx-auto">
     <h1 class="text-4xl max-md:text-center max-md:text-2xl">
       Check some of my <span class="color-primary-green">projects</span>
@@ -17,14 +12,13 @@
     </h4>
   </div>
 
-  <section class="w-[78%] mt-16">
+  <section class="w-[71%] mt-16">
+    <h4
+      class="text-center me-auto mb-7 text-2xl max-md:mb-4 max-md:text-base color-primary-green"
+    >
+      Ultimate Projects
+    </h4>
     <section class="w-full">
-      <h4
-        class="text-left me-auto mb-12 text-xl max-md:mb-4 max-md:text-base color-primary-green"
-      >
-        Ultimate Projects
-      </h4>
-
       <div class="flex justify-around items-center">
         <div
           class="grid grid-cols-2 grid-rows-2 gap-x-10 gap-y-10 max-md:grid max-md:grid-cols-1 max-md:grid-rows-4"
@@ -39,12 +33,12 @@
     </section>
     <section class="w-full mt-8">
       <h4
-        class="text-left me-auto my-5 text-xl color-primary-green max-md:mb-3 max-md:text-base"
+        class="text-left me-auto my-5 mb-7 text-2xl color-primary-green max-md:mb-3 max-md:text-base"
       >
         Backend Projects
       </h4>
       <div
-        class="relative border-[1px] hover:border-2 border-neutral-800 cursor-pointer rounded-md flex justify-center items-stretch gap-4 my-9 mb-12 w-[61rem] max-md:w-full h-60 max-md:h-36 max-md:flex max-md:justify-center max-md:items-center"
+        class="relative border-[1px] hover:border-2 border-neutral-800 cursor-pointer rounded-md flex justify-center items-stretch gap-4 mb-12 w-[60rem] max-md:w-full h-60 max-md:h-36 max-md:flex max-md:justify-center max-md:items-center"
       >
         <span
           class="color-primary-green absolute text-sm hidden bottom-2 right-3 max-md:flex justify-center items-center"
@@ -80,6 +74,11 @@
           </app-single-video-project>
         </div>
       </div>
+      <a
+        routerLink=""
+        class="self-end mt-16 cursor-pointer text-xl underline color-primary-green"
+        >See more <i class="bi bi-arrow-right"></i
+      ></a>
     </section>
   </section>
 </div>
