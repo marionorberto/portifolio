@@ -235,3 +235,23 @@ header {
 .dispose-menu {
   display: flex;
 }
+
+.pulse-button {
+  transition: transform 0.3s ease;
+  animation: pulse 2s infinite; /* Aplica a animação de pulso */
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px 1px rgb(113, 157, 116, 0.7);
+    transform: scale(1); /* Tamanho normal */
+  }
+  50% {
+    box-shadow: 0 0 20px 2px rgb(113, 157, 116, 0.9); /* Expande a sombra */
+    transform: scale(1.05); /* Ligeiro aumento no tamanho */
+  }
+  100% {
+    box-shadow: 0 0 10px 1px rgb(113, 157, 116, 0.7); /* Retorna ao estado inicial */
+    transform: scale(1); /* Volta ao tamanho normal */
+  }
+}

@@ -11,17 +11,19 @@
     </h4>
   </div>
 
-  <div class="mb-10">
+  <div *ngIf="!showTimeline" class="mb-10">
     <span class="flex flex-col items-center justify-center gap-0 anime">
       <i class="bi bi-chevron-down text-5xl text-neutral-700"></i>
       <i class="bi bi-chevron-down text-5xl -mt-5 text-neutral-700"></i>
     </span>
-    <a href="">
-      <h1 class="text-center color-primary-green text-xl">Click here To See</h1>
+    <a (click)="handleShowTimeline()" href="/#certifications" class="mt-2">
+      <h1 class="text-center color-primary-green text-xl font-bold">
+        Click here To See
+      </h1>
     </a>
   </div>
 
-  <div class="timeline hidden">
+  <div *ngIf="showTimeline" class="timeline">
     <div
       data-aos="fade-left"
       data-aos-duration="500"
@@ -36,7 +38,7 @@
         <p class="title-certification text-white">CCNA1 v7 cisco Training</p>
       </div>
       <div
-        class="sayings-certification max-sm:text-justify max-sm:tracking-tighter rounded-md bg-neutral-950 p-4 ps-8 mt-3 text-sm text-white"
+        class="sayings-certification max-sm:text-justify max-sm:tracking-tighter rounded-md bg-black p-4 ps-8 mt-3 text-sm text-white"
       >
         Entry level course training in networking, covering fundamental concepts
         of computer networks, configuring network devices and troubleshooting
@@ -60,7 +62,7 @@
         </p>
       </div>
       <div
-        class="sayings-certification max-sm:tracking-tighter max-sm:text-justify bg-neutral-950 p-4 ps-8 mt-3 text-sm text-white"
+        class="sayings-certification max-sm:tracking-tighter max-sm:text-justify bg-black p-4 ps-8 mt-3 text-sm text-white"
       >
         Training in developing modern web applications using the Angular
         framework. It covers everything from creating components and services to
@@ -83,7 +85,7 @@
         </p>
       </div>
       <div
-        class="sayings-certification max-sm:text-justify max-sm:tracking-tighter bg-neutral-950 p-4 ps-8 mt-3 text-sm text-white"
+        class="sayings-certification max-sm:text-justify max-sm:tracking-tighter bg-black p-4 ps-8 mt-3 text-sm text-white"
       >
         I completed my Bachelor's degree in Computer Science Engineering,
         gaining a solid foundation in areas such as software development,
@@ -108,7 +110,7 @@
         </p>
       </div>
       <div
-        class="sayings-certification max-sm:text-justify max-sm:tracking-tighter bg-neutral-950 p-4 ps-8 mt-3 text-sm text-white"
+        class="sayings-certification max-sm:text-justify max-sm:tracking-tighter bg-black p-4 ps-8 mt-3 text-sm text-white"
       >
         Comprehensive course covering full-stack JavaScript development with a
         focus on modern technologies. Includes in-depth tutorials on JavaScript
@@ -134,7 +136,7 @@
         <p class="title-certification text-white">Php Laravel</p>
       </div>
       <div
-        class="sayings-certification max-sm:text-justify max-sm:tracking-tighter bg-neutral-950 p-4 ps-8 mt-3 text-sm text-white"
+        class="sayings-certification max-sm:text-justify max-sm:tracking-tighter bg-black p-4 ps-8 mt-3 text-sm text-white"
       >
         Intensive course exploring web application development using PHP and the
         Laravel framework. Covers everything from basic PHP concepts to advanced
@@ -161,7 +163,7 @@
         </p>
       </div>
       <div
-        class="sayings-certification max-sm:text-justify max-sm:tracking-tighter bg-neutral-950 p-4 ps-8 mt-3 text-sm text-white"
+        class="sayings-certification max-sm:text-justify max-sm:tracking-tighter bg-black p-4 ps-8 mt-3 text-sm text-white"
       >
         Comprehensive course that provides a solid foundation in computer
         hardware and software, including assembling, maintaining, and
@@ -186,7 +188,7 @@
         </p>
       </div>
       <div
-        class="sayings-certification max-sm:text-justify max-sm:tracking-tighter bg-neutral-950 p-4 ps-8 mt-3 text-sm text-white"
+        class="sayings-certification max-sm:text-justify max-sm:tracking-tighter bg-black p-4 ps-8 mt-3 text-sm text-white"
       >
         Practical course focused on programming and project development with
         microcontrollers and the Arduino platform. It covers everything from
@@ -196,5 +198,17 @@
         skills to develop customized and innovative electronic solutions.
       </div>
     </div>
+  </div>
+
+  <div *ngIf="showTimeline" class="mt-10">
+    <span class="flex flex-col items-center justify-center gap-0 anime">
+      <i class="bi bi-chevron-up text-5xl text-neutral-700"></i>
+      <i class="bi bi-chevron-up text-5xl -mt-5 text-neutral-700"></i>
+    </span>
+    <button (click)="handleShowTimeline()" class="mt-2">
+      <h1 class="text-center color-primary-green text-xl font-bold">
+        Click here To Hide
+      </h1>
+    </button>
   </div>
 </div>

@@ -22,4 +22,9 @@ export class CertificationComponent {
     'COMPUTER CIENCE ENGENEER BACHELOR'
   ];
 
+  showTimeline: boolean = false;
+
+  handleShowTimeline() {
+    this.showTimeline = !this.showTimeline;
+  }
 }
