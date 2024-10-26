@@ -23,7 +23,7 @@ export class WorksComponent {
     },
     {
       name: 'Pokedex',
-      link: 'https://pokedex-poke.two.vercel.app',
+      link: 'https://pokedex-poke-two.vercel.app/',
       github: 'https://github.com/marionorberto/pokedex'
     },
     {
