@@ -1,78 +1,59 @@
-import { Component } from '@angular/core';
-import { SingleVideoProjectComponent } from "../single-video-project/single-video-project.component";
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { CardProjectComponent } from "../card-project/card-project.component";
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-works',
   standalone: true,
   imports: [
-    SingleVideoProjectComponent,
     CommonModule,
     FormsModule,
-  ],
+    CardProjectComponent
+],
   templateUrl: './works.component.html',
+  styleUrl: './works.component.css'
+  
 })
-export class WorksComponent {
+export class WorksComponent implements OnInit {
+  inputValue: string = '';
+  isFocused: boolean = false;
+  frontendProjects: any[] = [];
+  backendProjects: any[] = [];
+  fullstackProjects: any[] = [];
 
-  projectosContents = [
-    {
-      name: 'CyberNorb',
-      link: 'https://cybernorb.vercel.app',
-      github: 'https://github.com/marionorberto/cybernorb'
-    },
-    {
-      name: 'Pokedex',
-      link: 'https://pokedex-poke-two.vercel.app/',
-      github: 'https://github.com/marionorberto/pokedex'
-    },
-    {
-      name: 'Tablecoin',
-      link: 'https://tablecoin.vercel.app',
-      github: 'https://github.com/marionorberto/tablecoin'
-    },
-    {
-      name: 'Portifolio',
-      link: 'https://marionorberto.vercel.app/',
-      github: 'https://github.com/marionorberto/portifolio'
-    },
-  ] 
+  constructor(private dataService: DataService) {}
 
-  isProjectHover: boolean = false;
-  isProjectHover2: boolean = false;
-  isProjectHover3: boolean = false;
-  isProjectHover4: boolean = false;
-
-  handleProjectHover() {
-    this.isProjectHover = true;
+  ngOnInit(): void {
+    this.getFourFrontendProjects();
+    this.getFourBackendProjects();
+    this.getFourFullstackProjects();
   }
 
-  handleProjectBlur() {
-    this.isProjectHover = false;
+  onInputFocus(): void {
+    this.isFocused = true;
   }
 
-  handleProjectHover2() {
-    this.isProjectHover2 = true;
+  onInputBlur(): void {
+    this.isFocused = false;
   }
 
-  handleProjectBlur2() {
-    this.isProjectHover2 = false;
+  getFourFrontendProjects(): void{
+    this.dataService.getFrontendProjects().slice(0, 4).map((item) => {
+      this.frontendProjects.push(item);
+    });
   }
 
-   handleProjectHover3() {
-    this.isProjectHover3 = true;
-  }
+  getFourBackendProjects(): void{
+    this.dataService.getBackendProjects().slice(0, 4).map((item) => {
+      this.backendProjects.push(item);
+    })
+  }  
 
-  handleProjectBlur3() {
-    this.isProjectHover3 = false;
-  }
-
-   handleProjectHover4() {
-    this.isProjectHover4 = true;
-  }
-
-  handleProjectBlur4() {
-    this.isProjectHover4 = false;
-  }
-
+  getFourFullstackProjects(): void{
+    this.dataService.getFullstackProjects().slice(0, 4).map((item) => {
+      this.fullstackProjects.push(item);
+    })
+  }  
 }

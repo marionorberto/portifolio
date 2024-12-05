@@ -3,8 +3,7 @@ import { WorksComponent } from '../works/works.component';
 import { ServicesComponent } from '../services/services.component';
 import { ContactsComponent } from '../contacts/contacts.component';
 import { ResumeComponent } from '../resume/resume.component';
-import { CertificationComponent } from '../certification/certification.component';
-import { HeaderComponent } from '../header/header.component';
+import { HeroSectionComponent } from "../hero-section/hero-section.component";
 
 @Component({
   selector: 'app-main',
@@ -14,9 +13,8 @@ import { HeaderComponent } from '../header/header.component';
     ServicesComponent,
     ContactsComponent,
     ResumeComponent,
-    CertificationComponent,
-    HeaderComponent
-  ],
+    HeroSectionComponent
+],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })

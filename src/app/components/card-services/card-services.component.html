@@ -1,0 +1,80 @@
+<section
+  class="overflow-x-hidden overflow-y-hidden relative bg-neutral-900 p-3 border-[1px] border-neutral-800 rounded-md h-64 w-80 max-sm:w-72"
+>
+  <div
+    class="absolute top-4 grid grid-cols-9 grid-rows-6 min-sm:grid-cols-1 min-sm:grid-rows-1 opacity-50 z-10"
+  >
+    <div
+      class="border-[1px] border-t-0 border-l-0 opacity-5 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-t-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div
+      class="border-[1px] opacity-25 border-[var(--color-primary-green)] h-16 w-12"
+    ></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div
+      class="border-[1px] opacity-25 border-[var(--color-primary-green)] h-16 w-12"
+    ></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div
+      class="border-[1px] opacity-35 bg-zinc-900 border-neutral-700 h-16 w-12"
+    ></div>
+    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
+    <div
+      class="border-[1px] border-r-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+
+    <div
+      class="border-[1px] border-l-0 border-b-0 opacity-25 border-[var(--color-primary-green)] h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-b-0 opacity-25 border-[var(--color-primary-green)] h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-b-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-b-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] bg-zinc-900 border-b-0 opacity-25 border-[var(--color-primary-green)] h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-b-0 opacity-25 border-[var(--color-primary-green)] h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-b-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-b-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+    <div
+      class="border-[1px] border-r-0 border-b-0 opacity-35 border-neutral-700 h-16 w-12"
+    ></div>
+  </div>
+
+  <div
+    class="flex justify-center items-center mb-3 w-16 h-16 bg-zinc-800 rounded-full"
+  >
+    <img [src]="data.imageLink" alt="service image" class="w-10" />
+  </div>
+  <span
+    class="ps-1 text-xl font-semibold text-white text-center max-sm:text-lg"
+    >{{ data.title }}</span
+  >
+  <div
+    class="ps-1 mt-2 text-[16px] text-start font-light text-gray-200 text-base max-sm:text-sm"
+  >
+    {{ data.text }}
+    <strong
+      class="color-primary-green"
+      *ngFor="let item of data.languages"
+    ></strong
+    >...
+  </div>
+</section>

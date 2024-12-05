@@ -1,0 +1,230 @@
+<div class="py-5 px-48 max-sm:px-10">
+  <a href="#" class="max-sm:flex absolute left-3 top-5 hidden">
+    <div class="flex justify-center items-stretch gap-1">
+      <div
+        class="bg-[var(--color-secondary-green)] opacity-95 text-white rounded-md p-1 px-2 flex justify-center items-center h-10"
+      >
+        MN
+      </div>
+      <div class="flex flex-col justify-stretch items-start ms-[2px]">
+        <span class="text-[16px] text-zinc-300 font-semibold"
+          >Mário Norberto</span
+        >
+        <span class="text-zinc-200 text-[12px] -mt-1">Fullstack Developer</span>
+      </div>
+    </div>
+  </a>
+
+  <div
+    *ngIf="isMenuShown"
+    class="absolute bottom-0 flex flex-col justify-baseline w-full h-full z-40 bg-black"
+  >
+    <div class="w-full h-full relative flex justify-center items-center">
+      <i
+        (click)="isMenuClicked(true)"
+        class="absolute shadow-sm hover:shadow-[var(--color-primary-green)] py-4 px-4 text-xl bi bi-x bg-neutral-950 text-neutral-600 border-[1px] border-neutral-700 rounded-md cursor-pointer hidden max-md:flex max-md:top-6 max-md:right-5 z-50"
+      ></i>
+      <ul class="flex flex-col justify-center items-center gap-2 -mt-56 w-full">
+        <div class="bg-neutral-700 opacity-50 h-[1px] w-full"></div>
+        <li>
+          <a
+            (click)="isMenuClicked(true)"
+            href="/#works"
+            class="text-white text-xl opacity-90"
+            >Projects</a
+          >
+        </li>
+        <div class="bg-neutral-700 opacity-50 h-[1px] w-full"></div>
+        <li>
+          <a
+            (click)="isMenuClicked(true)"
+            href="/#resume"
+            class="text-white text-xl opacity-90"
+            >Resume
+          </a>
+        </li>
+        <div class="bg-neutral-700 opacity-50 h-[1px] w-full"></div>
+        <li>
+          <a
+            (click)="isMenuClicked(true)"
+            href="/#services"
+            class="text-white text-xl opacity-90"
+            >Services
+          </a>
+        </li>
+        <div class="bg-neutral-700 opacity-50 h-[1px] w-full"></div>
+        <li>
+          <a
+            (click)="isMenuClicked(true)"
+            href="/#contacts"
+            class="text-xl text-white"
+            >Contacts</a
+          >
+        </li>
+        <div class="bg-neutral-700 opacity-50 h-[1px] w-full"></div>
+        <a
+          (click)="isMenuClicked(true)"
+          href="/hire"
+          class="mt-8 pulse-button opacity-75 color-primary-green text-[15px] bg-zinc-900 rounded-md py-[6px] px-5 border-[1px] border-zinc-800 shadow-sm shadow-[var(--color-primary-green)]"
+          >Hire Me</a
+        >
+      </ul>
+    </div>
+  </div>
+  <i
+    (click)="showMenu()"
+    class="absolute shadow-sm hover:shadow-[var(--color-primary-green)] py-4 px-4 text-xl bi bi-list bg-neutral-950 text-neutral-600 border-[1px] border-neutral-700 rounded-md cursor-pointer hidden max-md:flex max-md:top-6 max-md:right-5"
+  ></i>
+
+  <nav class="flex justify-between items-center max-sm:hidden">
+    <a href="#">
+      <div class="flex justify-center items-stretch gap-1">
+        <div
+          class="bg-[var(--color-secondary-green)] opacity-95 text-white rounded-md p-2 px-3 flex justify-center items-center h-12"
+        >
+          MN
+        </div>
+        <div class="flex flex-col justify-stretch items-start ms-[2px]">
+          <span class="text-2xl text-zinc-300 font-semibold"
+            >Mário Norberto</span
+          >
+          <span class="text-zinc-200 text-sm -mt-1">Fullstack Developer</span>
+        </div>
+      </div>
+    </a>
+    <ul class="relative">
+      <li>
+        <a
+          href="/#projects"
+          class="border-[1px] border-neutral-950 border-opacity-80 rounded-md font-extralight p-1 px-2 bg-zinc-900 text-[15px] text-gray-300"
+          >Projects</a
+        >
+      </li>
+      <li>
+        <a
+          href="/#services"
+          class="border-[1px] border-neutral-950 border-opacity-80 rounded-md p-1 px-2 bg-zinc-900 font-extralight text-[15px] text-gray-300"
+          >Services</a
+        >
+      </li>
+      <li>
+        <a
+          href="/#resume"
+          router
+          class="border-[1px] border-neutral-950 border-opacity-80 rounded-md p-1 px-2 bg-zinc-900 font-extralight text-[15px] text-gray-300"
+          >Resume</a
+        >
+      </li>
+      <li>
+        <a
+          href="/#contacts"
+          class="rounded-md font-extralight border-[1px] border-neutral-950 border-opacity-80 p-1 px-2 bg-zinc-900 text-[15px] text-gray-300"
+          >Contacts</a
+        >
+      </li>
+      <a
+        routerLink="/hire"
+        class="absolute top-10 right-1 pulse-button ms-7 opacity-90 color-primary-green text-[15px] hover:bg-zinc-900 rounded-md py-[1px] px-1 border-[1px] border-zinc-800 cursor-pointer"
+      >
+        Hire Me
+      </a>
+    </ul>
+  </nav>
+  <section
+    class="flex justify-around items-stretch mt-28 gap-4 px-24 max-sm:flex-col max-sm:items-center max-sm:gap-6"
+  >
+    <div>
+      <div
+        class="bg-violet-300 opacity-90 w-52 h-52 rounded-full p-1 flex justify-center items-center overflow-hidden"
+      >
+        <img
+          src="../../../assets/images/mario-normal.png"
+          alt=""
+          srcset=""
+          class="h-full w-full"
+        />
+      </div>
+    </div>
+    <div
+      class="min-sm:w-[59rem] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center"
+    >
+      <div class="max-sm:mx-auto">
+        <span
+          class="rounded-md font-extralight py-3 px-4 max-sm:py-2 bg-zinc-800 text-[17px] max-sm:text-[16px] text-gray-400 text-nowrap max-sm:flex max-sm:justify-center max-sm:items-center"
+        >
+          I am
+          <span class="outline-dotted outline-zinc-700 ms-1"
+            >Mário Norberto</span
+          >
+          <img
+            class="inline-block ms-2 w-6 h-6"
+            src="https://em-content.zobj.net/source/skype/295/waving-hand_1f44b.png"
+            alt=""
+        /></span>
+
+        <h1
+          class="text-6xl text-zinc-300 mt-3 font-bold max-sm:text-3xl max-sm:text-nowrap"
+        >
+          Fullstack Developer
+        </h1>
+      </div>
+      <p
+        class="text-2xl mb-1 text-zinc-200 mt-1 font-semibold max-sm:text-sm max-sm:text-nowrap max-sm:text-center"
+      >
+        Building Softwares, Systems Automatization <br />
+        and Enthusiast Pentester
+      </p>
+      <p class="max-sm:hidden text-gray-300 font-light text-sm">
+        Fullstack programmer for 2+ years as freelancer, mainly focused on
+        backend programming with Typescript. My main expertise is
+        Typescript/JavaScript using NestJS for backend and Angular/React
+        framework to build frontend applications.
+      </p>
+      <p
+        class="max-sm:block hidden text-gray-300 font-light text-sm max-sm:text-center"
+      >
+        Fullstack programmer for 2+ years. My main expertise is
+        Typescript/JavaScript using NestJS for backend and Angular/React to
+        build frontend applications.
+      </p>
+      <div class="flex justify-start items-center gap-3 mt-2 font-light">
+        <a
+          href="/#projects"
+          class="font-semibold bg-[var(--color-secondary-green)] opacity-80 text-white text-[15px] hover:opacity-75 rounded-md py-[8px] px-4 border-[1px] border-zinc-800 cursor-pointer"
+          >My Projects</a
+        >
+        <div class="relative">
+          <button
+            (click)="onshowCVOption()"
+            class="font-semibold color-primary-green text-[15px] hover:bg-zinc-900 rounded-md py-[8px] px-4 border-[1px] border-zinc-800 cursor-pointer"
+          >
+            Download cv <i class="bi bi-download text-lg"> </i>
+          </button>
+          <div
+            *ngIf="showCVOption"
+            class="absolute w-40 h-32 bg-neutral-900 flex flex-col justify-center items-center -right-full ms-20 top-0 rounded-md"
+          >
+            <a
+              href="#"
+              class="text-gray-400 text-center font-light hover:text-[var(--color-primary-green)] py-2 hover:underline decoration-dotted decoration-1 decoration-[var(--color-primary-green)] text-sm"
+              >Backend CV</a
+            >
+            <div class="h-[1px] w-full bg-neutral-800"></div>
+            <a
+              href="#"
+              class="text-gray-400 text-center font-light hover:text-[var(--color-primary-green)] py-2 hover:underline decoration-dotted decoration-1 decoration-[var(--color-primary-green)] text-sm"
+              >Frontend CV</a
+            >
+            <div class="h-[1px] w-full bg-neutral-800"></div>
+
+            <a
+              href="#"
+              class="text-gray-400 text-center font-light hover:text-[var(--color-primary-green)] py-2 hover:underline decoration-dotted decoration-1 decoration-[var(--color-primary-green)] text-sm"
+              >Fullstack CV</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

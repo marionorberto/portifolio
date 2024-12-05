@@ -1,15 +1,9 @@
-p {
-  font-family: "Roboto-Light";
-}
-
 #services {
-  padding-bottom: 140px;
+  background: #0c0c0c;
 }
-
 .services-subtitle {
   font-size: 1.2rem;
 }
-
 @media not all and (min-width: 768px) {
   .cont {
     flex-direction: column;

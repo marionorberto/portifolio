@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
@@ -8,7 +9,18 @@ import { RouterOutlet } from '@angular/router';
   ],
   templateUrl: './app.component.html',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'marionorberto';
-}
+  private platformId = inject(PLATFORM_ID);
 
+  ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      const loader = document.getElementById('loading-spinner');
+      if (loader) {
+        setTimeout(() => {
+          loader.style.display = 'none';
+        }, 2500)
+      }
+    }
+  }
+}

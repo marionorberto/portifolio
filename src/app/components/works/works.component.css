@@ -1,5 +1,8 @@
-.container-projects {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
+.projects {
+  background-color: #2d3436;
+  background-image: linear-gradient(315deg, #272d2f 0%, #141414 74%);
+}
+
+option {
+  color: #9ca3af;
 }

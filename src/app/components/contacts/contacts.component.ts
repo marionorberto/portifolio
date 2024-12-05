@@ -1,28 +1,43 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
-import { CalendarModule } from 'primeng/calendar';
-import { ButtonModule } from 'primeng/button';
-import { DialogModule } from 'primeng/dialog';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-contacts',
   standalone: true,
-  imports: [CalendarModule,CommonModule, FormsModule, ButtonModule, DialogModule ],
+  imports: [
+    CommonModule,
+    FormsModule
+  ],
   templateUrl: './contacts.component.html',
   styleUrl: './contacts.component.css'
 })
 export class ContactsComponent {
+  email: string = '';
+  bodyEmail: string = '';
+  errors: string[] = [];
+  showEmailCopy: boolean = false;
+  
   sendEmail() {
-    const recipient = 'marionorberto2018@gmail.com';
-    const subject = 'Hiring Inquiry: Fullstack Developer Position';
-    const body = `Hi, I am interested in discussing opportunities for a Fullstack Developer role with you.
-    Best regards, Mário Norberto`;
+    if(!this.email || !this.bodyEmail) {
+      this.errors.push('email and email body required');
+      return;
+    }
 
-    // Create the mailto link
+    const recipient = 'marionorberto2018@gmail.com';
+    const subject = 'Hiring Inquiry: Developer Position';
+    const body = this.bodyEmail;
     const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    // Redirect to the mailto link
+      
     window.location.href = mailtoLink;
+  }
+
+  onShowEmailCopy() {
+    // this.showEmailCopy = !this.showEmailCopy;
+    alert('ok')
+  }
+
+  onHideEmailCopy() {
+    this.showEmailCopy = false;
   }
 }
 

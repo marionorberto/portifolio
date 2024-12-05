@@ -1,57 +1,165 @@
-<div
-  id="contacts"
-  class="relative pb-24 flex flex-col justify-center items-center"
->
-  <div class="">
-    <h1 class="first-text-main text-4xl max-md:text-2xl">Get In Touch</h1>
-    <h4 class="color-primary-green underline max-md:text-sm">Contacts</h4>
+<footer id="contacts" class="relative pb-16 px-48 pt-10 max-sm:px-10">
+  <div>
+    <h4 class="text-white font-semibold text-4xl max-sm:text-3xl">Contacts</h4>
+    <h1 class="text-sm color-primary-green font-semibold">Get In Touch</h1>
   </div>
-  <a
-    href="/hire"
-    class="mt-8 opacity-75 color-primary-green text-[15px] bg-black hover:bg-zinc-900 rounded-md py-[6px] px-5 border-[1px] border-zinc-800 shadow-s shadow-[var(--color-primary-gren)] pulse-button"
-    >Hire Me</a
-  >
-  <div class="container-contacts mt-14">
-    <div class="flex justify-center items-center gap-2">
-      <a (click)="sendEmail()">
-        <i
-          class="text-lg hover:shadow-sm hover:shadow-[var(--color-primary-green)] h-12 w-12 bg-neutral-950 flex justify-center items-center rounded-md cursor-pointer bi bi-envelope-fill"
-        ></i>
-      </a>
-      <a href="https://github.com/marionorberto">
-        <i
-          class="hover:shadow-sm hover:shadow-[var(--color-primary-green)] h-12 w-12 bg-neutral-950 flex justify-center items-center rounded-md cursor-pointer bi bi-github"
-        ></i>
-      </a>
-      <a href="https://wa.me/935327990">
-        <i
-          class="hover:shadow-sm hover:shadow-[var(--color-primary-green)] h-12 w-12 bg-neutral-950 flex justify-center items-center rounded-md cursor-pointer bi bi-whatsapp"
-        ></i>
-      </a>
-      <a href="https://linkedin.com/in/marionorberto">
-        <i
-          class="hover:shadow-sm hover:shadow-[var(--color-primary-green)] h-12 w-12 bg-neutral-950 flex justify-center items-center rounded-md cursor-pointer bi bi-linkedin"
-        ></i>
-      </a>
-    </div>
-    <h4 class="text-zinc-500">©Copyright All Rights Reserved</h4>
-  </div>
+  <section class="flex flex-col justify-center items-center pt-14">
+    <section
+      class="flex justify-around items-center max-sm:flex-col max-sm:items-center max-sm:gap-10"
+    >
+      <form method="post" class="flex flex-col justify-center items-start">
+        <div>
+          <h2 class="font-semibold text-white text-2xl max-sm:text-lg">
+            Send E-mail
+          </h2>
+          <input
+            class="border-[1px] border-gray-700 my-2 bg-zinc-800 py-2 px-5 rounded-md w-[21rem]"
+            type="text"
+            placeholder="Your E-mail"
+            required
+            [value]="email"
+          />
+        </div>
+        <textarea
+          class="bg-zinc-800 py-2 px-3 rounded-md border-[1px] border-gray-700 text-gray-700"
+          placeholder="Drop your message here!"
+          rows="6"
+          cols="29"
+          required
+          [value]="bodyEmail"
+        >
+        </textarea>
+        <button
+          class="mt-2 bg-zinc-800 py-2 px-3 rounded-md border-[1px] border-gray-700 text-gray-400 hover:outline-violet-300"
+          type="submit"
+          (click)="sendEmail()"
+        >
+          Send Email
+        </button>
+      </form>
+      <section class="ms-14 max-sm:ms-0">
+        <dl class="alt mb-4">
+          <dt>Address</dt>
+          <dd class="text-gray-300">Luanda / Angola</dd>
+          <dt>Phone</dt>
+          <dd class="text-gray-300 cursor-pointer w-48">
+            <div class="relative">
+              (+244) 935-327-990
+              <i
+                class="absolute bottom-0 right-0 bi bi-copy rounded-full h-7 w-7 bg-neutral-800 text-sm text-gray-200 flex justify-center items-center hover:text-gray-300"
+              ></i>
+            </div>
+          </dd>
 
-  <div class="absolute right-10 bottom-14 max-md:right-5">
-    <select name="lang" id="lang" class="bg-transparent">
-      <option value="en" class="bg-transparent">EN 🇺🇸</option>
-      <option value="pt" class="bg-transparent">PT 🇵🇹</option>
-    </select>
-  </div>
+          <dt>Email</dt>
+          <dd
+            (mouseout)="onHideEmailCopy()"
+            class="text-gray-300 cursor-pointer underline decoration-dotted decoration-1 decoration-[var(--color-primary-green)] w-[17rem] bg-red-20"
+          >
+            <div (click)="onShowEmailCopy()" class="relative">
+              marionorberto2018&#64;gmail.com
+              <i
+                *ngIf="showEmailCopy"
+                class="absolute bottom-0 right-0 bi bi-copy rounded-full h-7 w-7 bg-neutral-800 text-sm text-gray-200 flex justify-center items-center hover:text-gray-300"
+              ></i>
+            </div>
+          </dd>
+        </dl>
+        <ul class="icons mt-3 mb-5">
+          <li>
+            <a
+              target="blank"
+              href="https://linkedin.com/in/marionorberto"
+              class="flex bg-zinc-800 rounded-md text-sm w-28 opacity-95"
+            >
+              <i
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20px"
+                  viewBox="0 -960 960 960"
+                  width="20px"
+                  fill="#FFFFFF"
+                >
+                  <path
+                    d="m243-192-51-51 429-429H384v-72h360v360h-72v-237L243-192Z"
+                  /></svg></i
+              ><span class="label">Linkedin</span
+              ><i class="ms-1 bi bi-linkedin"></i
+            ></a>
+          </li>
+
+          <li>
+            <a
+              target="blank"
+              class="cursor-pointer"
+              href="https://github.com/marionorberto"
+              class="flex bg-zinc-800 rounded-md text-sm w-24 opacity-95"
+            >
+              <i
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20px"
+                  viewBox="0 -960 960 960"
+                  width="20px"
+                  fill="#FFFFFF"
+                >
+                  <path
+                    d="m243-192-51-51 429-429H384v-72h360v360h-72v-237L243-192Z"
+                  /></svg></i
+              ><span class="label">GitHub</span><i class="ms-1 bi bi-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              target="blank"
+              href="https://wa.me/935327990"
+              class="cursor-pointer"
+              ><span
+                class="flex bg-zinc-800 opacity-95 rounded-md text-sm w-28"
+              >
+                <i
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="20px"
+                    viewBox="0 -960 960 960"
+                    width="20px"
+                    fill="#FFFFFF"
+                  >
+                    <path
+                      d="m243-192-51-51 429-429H384v-72h360v360h-72v-237L243-192Z"
+                    /></svg
+                ></i>
+                Whatsapp <i class="ms-1 bi bi-whatsapp"></i></span
+            ></a>
+          </li>
+        </ul>
+        <a
+          href="/hire"
+          class="mt-10 color-primary-green text-[15px] bg-black hover:bg-zinc-900 rounded-md py-[6px] px-5 border-[1px] border-zinc-800 shadow-[var(--color-primary-gren)] pulse-button"
+          >Hire Me</a
+        >
+      </section>
+    </section>
+    <p class="text-gray-300 text-sm mt-28">
+      &copy; Copyright - website Developed by:
+      <a
+        href="https://github.com/marionorberto"
+        class="hover:text-[var(--color-primary-green)] underline decoration-dotted decoration-1 decoration-[var(--color-primary-green)] max-sm:text-sm max-sm:text-nowrap"
+        >Mario Norberto</a
+      >.
+    </p>
+  </section>
   <div
     class="absolute bottom-28 right-10 max-md:bottom-20 max-md:right-5 flex gap-3 justify-center items-center max-sm:right-6"
   >
-    <span class="text-white go-to-top max-md:hidden">Go To Top</span>
+    <span class="text-zinc-600 text-lg font-extralight go-to-top max-md:hidden"
+      >Go Top</span
+    >
     <a
       href="#"
-      class="hover:shadow-sm hover:shadow-[var(--color-primary-green)] flex justify-center items-center bg-neutral-950 cursor-pointer text-zinc-500 rounded-full w-[35px] h-[50px]"
+      class="hover:shadow-lg hover:shadow-[var(--color-primary-green)] shadow-sm shadow-[var(--color-primary-green)] flex justify-center items-center bg-neutral-950 cursor-pointer text-zinc-500 rounded-full w-[35px] h-[50px]"
     >
-      <i class="bi bi-chevron-up text-2xl p-3"></i>
+      <i class="bi bi-chevron-up text-3xl p-3"></i>
     </a>
   </div>
-</div>
+</footer>
