@@ -1,4 +1,4 @@
-<div class="py-5 px-48 max-sm:px-10">
+<div class="relative py-5 px-48 max-sm:px-10">
   <a href="#" class="max-sm:flex absolute left-3 top-5 hidden">
     <div class="flex justify-center items-stretch gap-1">
       <div
@@ -19,18 +19,43 @@
     *ngIf="isMenuShown"
     class="absolute bottom-0 flex flex-col justify-baseline w-full h-full z-40 bg-black"
   >
-    <div class="w-full h-full relative flex justify-center items-center">
-      <i
+    <div
+      class="w-full h-full relative flex justify-center items-center bg-neutral-950"
+    >
+      <span
         (click)="isMenuClicked(true)"
-        class="absolute shadow-sm hover:shadow-[var(--color-primary-green)] py-4 px-4 text-xl bi bi-x bg-neutral-950 text-neutral-600 border-[1px] border-neutral-700 rounded-md cursor-pointer hidden max-md:flex max-md:top-6 max-md:right-5 z-50"
-      ></i>
+        class="absolute py-1 px-1 bg-neutral-900 rounded-md cursor-pointer hidden max-md:flex max-md:top-6 max-md:right-5 z-50"
+      >
+        <img src="../../../assets/images/x.svg" alt="" srcset="" />
+      </span>
       <ul class="flex flex-col justify-center items-center gap-2 -mt-56 w-full">
+        <a
+          (click)="isMenuClicked(true)"
+          href="#"
+          class="max-sm:flex absolute left-3 top-5 hidden"
+        >
+          <div class="flex justify-center items-stretch gap-1">
+            <div
+              class="bg-[var(--color-secondary-green)] opacity-95 text-white rounded-md p-1 px-2 flex justify-center items-center h-10"
+            >
+              MN
+            </div>
+            <div class="flex flex-col justify-stretch items-start ms-[2px]">
+              <span class="text-[16px] text-zinc-300 font-semibold"
+                >Mário Norberto</span
+              >
+              <span class="text-zinc-200 text-[12px] -mt-1"
+                >Fullstack Developer</span
+              >
+            </div>
+          </div>
+        </a>
         <div class="bg-neutral-700 opacity-50 h-[1px] w-full"></div>
         <li>
           <a
             (click)="isMenuClicked(true)"
             href="/#works"
-            class="text-white text-xl opacity-90"
+            class="border-[1px] border-neutral-950 border-opacity-80 rounded-md font-extralight p-1 px-2 bg-zinc-900 text-[15px] text-gray-300"
             >Projects</a
           >
         </li>
@@ -38,17 +63,8 @@
         <li>
           <a
             (click)="isMenuClicked(true)"
-            href="/#resume"
-            class="text-white text-xl opacity-90"
-            >Resume
-          </a>
-        </li>
-        <div class="bg-neutral-700 opacity-50 h-[1px] w-full"></div>
-        <li>
-          <a
-            (click)="isMenuClicked(true)"
             href="/#services"
-            class="text-white text-xl opacity-90"
+            class="border-[1px] border-neutral-950 border-opacity-80 rounded-md font-extralight p-1 px-2 bg-zinc-900 text-[15px] text-gray-300"
             >Services
           </a>
         </li>
@@ -56,8 +72,17 @@
         <li>
           <a
             (click)="isMenuClicked(true)"
+            href="/#resume"
+            class="border-[1px] border-neutral-950 border-opacity-80 rounded-md font-extralight p-1 px-2 bg-zinc-900 text-[15px] text-gray-300"
+            >Resume
+          </a>
+        </li>
+        <div class="bg-neutral-700 opacity-50 h-[1px] w-full"></div>
+        <li>
+          <a
+            (click)="isMenuClicked(true)"
             href="/#contacts"
-            class="text-xl text-white"
+            class="border-[1px] border-neutral-950 border-opacity-80 rounded-md font-extralight p-1 px-2 bg-zinc-900 text-[15px] text-gray-300"
             >Contacts</a
           >
         </li>
@@ -71,10 +96,12 @@
       </ul>
     </div>
   </div>
-  <i
+  <span
     (click)="showMenu()"
-    class="absolute shadow-sm hover:shadow-[var(--color-primary-green)] py-4 px-4 text-xl bi bi-list bg-neutral-950 text-neutral-600 border-[1px] border-neutral-700 rounded-md cursor-pointer hidden max-md:flex max-md:top-6 max-md:right-5"
-  ></i>
+    class="absolute shadow-sm py-1 px-1 bg-neutral-950 rounded-md cursor-pointer hidden max-md:flex max-md:top-4 max-md:right-2"
+  >
+    <img src="../../../assets/images/menu.svg" alt="" srcset="" />
+  </span>
 
   <nav class="flex justify-between items-center max-sm:hidden">
     <a href="#">
