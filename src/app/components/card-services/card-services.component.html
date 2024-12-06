@@ -71,10 +71,8 @@
     class="ps-1 mt-2 text-[16px] text-start font-light text-gray-200 text-base max-sm:text-sm"
   >
     {{ data.text }}
-    <strong
-      class="color-primary-green"
-      *ngFor="let item of data.languages"
-    ></strong
+    <strong class="color-primary-green" *ngFor="let item of data.languages"
+      >{{ item }}, </strong
     >...
   </div>
 </section>

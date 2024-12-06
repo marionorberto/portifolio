@@ -7,26 +7,32 @@
     <section
       class="flex justify-around items-center max-sm:flex-col max-sm:items-center max-sm:gap-10"
     >
-      <form method="post" class="flex flex-col justify-center items-start">
+      <form
+        ngNativeValidate
+        method="post"
+        class="flex flex-col justify-center items-start"
+      >
         <div>
           <h2 class="font-semibold text-white text-2xl max-sm:text-lg">
             Send E-mail
           </h2>
           <input
             class="border-[1px] border-gray-700 my-2 bg-zinc-800 py-2 px-5 rounded-md w-[21rem]"
-            type="text"
+            type="email"
             placeholder="Your E-mail"
             required
-            [value]="email"
+            [(ngModel)]="email"
+            [ngModelOptions]="{ standalone: true }"
           />
         </div>
         <textarea
-          class="bg-zinc-800 py-2 px-3 rounded-md border-[1px] border-gray-700 text-gray-700"
+          class="bg-zinc-800 py-2 px-3 rounded-md border-[1px] border-gray-700 text-gray-300"
           placeholder="Drop your message here!"
           rows="6"
-          cols="29"
+          cols="33"
           required
-          [value]="bodyEmail"
+          [(ngModel)]="bodyEmail"
+          [ngModelOptions]="{ standalone: true }"
         >
         </textarea>
         <button
@@ -40,28 +46,19 @@
       <section class="ms-14 max-sm:ms-0">
         <dl class="alt mb-4">
           <dt>Address</dt>
-          <dd class="text-gray-300">Luanda / Angola</dd>
+          <dd class="text-gray-300 max-sm:text-gray-400">Luanda / Angola</dd>
           <dt>Phone</dt>
           <dd class="max-sm:text-gray-400 text-gray-300 cursor-pointer w-48">
-            <div class="relative">
-              (+244) 935-327-990
-              <i
-                class="absolute bottom-0 right-0 bi bi-copy rounded-full h-7 w-7 bg-neutral-800 text-sm text-gray-200 flex justify-center items-center hover:text-gray-300"
-              ></i>
-            </div>
+            <div class="relative">(+244) 935-327-990</div>
           </dd>
 
           <dt>Email</dt>
           <dd
             (mouseout)="onHideEmailCopy()"
-            class="max-sm:text-gray-400 text-gray-300 cursor-pointer underline decoration-dotted decoration-1 decoration-[var(--color-primary-green)] w-[17rem] bg-red-20"
+            class="max-sm:text-gray-400 text-gray-300 cursor-pointer w-[17rem] bg-red-20"
           >
             <div (click)="onShowEmailCopy()" class="relative">
               marionorberto2018&#64;gmail.com
-              <i
-                *ngIf="showEmailCopy"
-                class="absolute bottom-0 right-0 bi bi-copy rounded-full h-7 w-7 bg-neutral-800 text-sm text-gray-200 flex justify-center items-center hover:text-gray-300"
-              ></i>
             </div>
           </dd>
         </dl>
@@ -133,11 +130,12 @@
             ></a>
           </li>
         </ul>
-        <a
-          href="/hire"
+        <button
+          (click)="openDialog()"
           class="mt-10 color-primary-green text-[15px] bg-black hover:bg-zinc-900 rounded-md py-[6px] px-5 border-[1px] border-zinc-800 shadow-[var(--color-primary-gren)] pulse-button"
-          >Hire Me</a
         >
+          Hire Me
+        </button>
       </section>
     </section>
     <p class="text-gray-300 max-sm:text-gray-400 text-sm mt-28">

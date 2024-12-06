@@ -22,7 +22,7 @@ export class DataService {
           'cybernorb-img-3',
           'cybernorb-img-4',
          ],
-        tech: [
+        techs: [
           'Typescript',
           'Angular',
           'PrimeNG',
@@ -42,7 +42,7 @@ export class DataService {
           'kfragrance-img-3',
           'kfragrance-img-4',
         ],
-        tech: [
+        techs: [
           'Typescript',
           'Angular',
           'PrimeNG',
@@ -61,7 +61,7 @@ export class DataService {
           'pokedex-img-3',
           'pokedex-img-4',
         ],
-        tech: [
+        techs: [
           'Typescript',
           'Angular',
           'Css',
@@ -81,7 +81,7 @@ export class DataService {
           'tablecoin-img-3',
           'tablecoin-img-4',
         ],
-        tech: [
+        techs: [
           'Typescript',
           'Angular',
           'ChartJS',
@@ -103,7 +103,7 @@ export class DataService {
           'postable-img-3',
           'postable-img-4',
         ],
-        tech: [
+        techs: [
           'Typescript',
           'NestJS',
           'JWT',
@@ -123,7 +123,7 @@ export class DataService {
           'tasker-api-img-3',
           'tasker-api-img-4',
         ],
-        tech: [
+        techs: [
           'Typescript',
           'Express',
           'JWT',
@@ -143,7 +143,7 @@ export class DataService {
           'project-redis-img-3',
           'project-redis-img-4',
         ],
-        tech: [
+        techs: [
           'Typescript',
           'Express',
           'JWT',
@@ -163,7 +163,7 @@ export class DataService {
           'project-kafka-img-3',
           'project-kafka-img-4',
         ],
-        tech: [
+        techs: [
           'Typescript',
           'NestJS',
           'APACHE KAFKA',
@@ -185,7 +185,7 @@ export class DataService {
           'eab-img-3',
           'eab-img-4',
         ],
-        tech: [
+        techs: [
           'Php',
           'Laravel',
           'Javascript',
@@ -205,13 +205,53 @@ export class DataService {
           'tasker-img-3',
           'tasker-img-4',
         ],
-        tech: [
+        techs: [
           'Typescript',
           'Angular',
-          'NG-BOOTSTRAP',
+          'Ng-Bstrap',
           'API CONSUMING'
         ]
       },
+ {
+        title: 'Tasker',
+        description: '---',
+        poster: '../../../assets/images/tasker-poster.png',
+        site: '---',
+        github: 'https://github.com/marionorberto/tasker',
+        mediaUrls: [
+          'tasker-video',
+          'tasker-img-1',
+          'tasker-img-2',
+          'tasker-img-3',
+          'tasker-img-4',
+        ],
+        techs: [
+          'Typescript',
+          'Angular',
+          'Ng-Bstrap',
+          'API CONSUMING'
+        ]
+      },
+ {
+        title: 'Tasker',
+        description: '---',
+        poster: '../../../assets/images/tasker-poster.png',
+        site: '---',
+        github: 'https://github.com/marionorberto/tasker',
+        mediaUrls: [
+          'tasker-video',
+          'tasker-img-1',
+          'tasker-img-2',
+          'tasker-img-3',
+          'tasker-img-4',
+        ],
+        techs: [
+          'Typescript',
+          'Angular',
+          'Ng-Bstrap',
+          'API'
+        ]
+      },            
       // {
       //   title: '',
       //   description: '',
@@ -219,7 +259,7 @@ export class DataService {
       //   site: '',
       //   github: '',
       //   mediaUrls: [],
-      //   tech: []
+      //   techs: []
       // },
       // {
       //   title: '',
@@ -228,7 +268,7 @@ export class DataService {
       //   site: '',
       //   github: '',
       //   mediaUrls: [],
-      //   tech: []
+      //   techs: []
       // },
     ],
    },

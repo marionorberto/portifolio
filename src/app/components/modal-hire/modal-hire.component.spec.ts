@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavComponent } from './nav.component';
+import { ModalHireComponent } from './modal-hire.component';
 
-describe('NavComponent', () => {
-  let component: NavComponent;
-  let fixture: ComponentFixture<NavComponent>;
+describe('ModalHireComponent', () => {
+  let component: ModalHireComponent;
+  let fixture: ComponentFixture<ModalHireComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavComponent]
+      imports: [ModalHireComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(NavComponent);
+    fixture = TestBed.createComponent(ModalHireComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

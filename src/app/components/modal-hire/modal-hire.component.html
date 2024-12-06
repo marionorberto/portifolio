@@ -1,0 +1,88 @@
+<!-- <button class="absolute right-1 top-2"> -->
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close class="absolute right-2 top-2">
+    <img src="../../../assets/images/x.svg" alt="" />
+  </button>
+</mat-dialog-actions>
+
+<h1 mat-dialog-title class="text-4xl font-bold text-center">
+  Let's Works Together
+</h1>
+<p class="px-16 text-neutral-500 text-center">
+  "Discover how I can help bring your ideas to life. Choose an area of
+  expertise, and let’s create something amazing together!"
+</p>
+<mat-dialog-content class="mat-typography">
+  <section
+    class="grid grid-cols-2 grid-rows-2 gap-y-5 gap-x-1 max-lg:grid max-lg:grid-cols-1 max-lg:grid-rows-1 place-content-center place-items-center"
+  >
+    <div
+      class="w-80 max-lg:w-[17rem] max-lg:h-60 h-56 bg-neutral-900 rounded-md px-3 py-2"
+    >
+      <h3 mat-dialog-title class="text-lg font-bold text-center">
+        Web Development
+      </h3>
+      <p class="text-center -mt-3 max-lg:text-center">
+        Building Fullstack, responsive and dynamic websites focused on high
+        performance.
+      </p>
+      <button
+        (click)="sendEmail('web')"
+        class="max-lg:text-center rounded-md hover:text-black hover:bg-white text-white font-light text-center py-3 bg-neutral-800 w-full"
+      >
+        I want to hire you
+      </button>
+    </div>
+    <div
+      class="w-80 max-lg:w-[17rem] max-lg:h-60 h-56 bg-neutral-900 rounded-md px-3 py-2"
+    >
+      <h3 mat-dialog-title class="text-lg font-bold text-center">
+        Mobile Development
+      </h3>
+      <p class="text-center">
+        Developing modern apps for Android and iOS, ensuring performance and
+        usability.
+      </p>
+      <button
+        (click)="sendEmail('mobile')"
+        class="rounded-md text-white font-light text-center py-3 bg-neutral-800 hover:text-black hover:bg-white w-full"
+      >
+        Work with me
+      </button>
+    </div>
+    <div
+      class="w-80 max-lg:w-[17rem] max-lg:h-60 h-56 bg-neutral-900 rounded-md px-3 py-2"
+    >
+      <h3 mat-dialog-title class="text-lg font-bold text-center">
+        Digital Electronic
+      </h3>
+      <p class="text-center">
+        Innovative solutions in digital electronics, from prototyping to final
+        implementation.
+      </p>
+      <button
+        (click)="sendEmail('electronic')"
+        class="rounded-md text-white font-light text-center py-3 bg-neutral-800 w-full hover:text-black hover:bg-white"
+      >
+        Explore solutions with me
+      </button>
+    </div>
+    <div
+      class="w-80 max-lg:w-[17rem] max-lg:h-60 h-56 bg-neutral-900 rounded-md px-3 py-2"
+    >
+      <h3 mat-dialog-title class="text-lg font-bold text-center">
+        Project Guidance
+      </h3>
+      <p class="text-center">
+        Strategic and technical support to organize and optimize your tech
+        projects.
+      </p>
+      <button
+        (click)="sendEmail('guidance')"
+        class="rounded-md text-white font-light text-center py-3 bg-neutral-800 w-full hover:text-black hover:bg-white"
+      >
+        Let's talk
+      </button>
+    </div>
+  </section>
+</mat-dialog-content>

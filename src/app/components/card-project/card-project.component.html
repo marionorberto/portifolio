@@ -1,39 +1,32 @@
 <div>
   <div class="relative flex justify-center items-center">
-    <video
+    <div
       (mouseover)="handleProjectHover()"
       (mouseout)="handleProjectBlur()"
-      poster="{{ data.poster }}"
-      class="bg-black text-sm border-neutral-800 opacity-95 h-64 w-[29rem] max-md:h-[10rem] max-md:w-[30rem] rounded-md hover:border-2 border-[1px]"
-      src="{{ data.mediaUrls[0] }}"
-    ></video>
+      class="bg-black text-sm border-neutral-800 opacity-95 h-64 w-[29rem] max-lg:w-[34rem] max-lg:h-[10rem] rounded-md hover:border-2 border-[1px] flex flex-col justify-center items-center"
+    >
+      <img class="w-full" src="{{ data.poster }}" alt="" />
+    </div>
     <i
       *ngIf="isProjectHover"
-      class="ps-3 pe-1 bg-zinc-900 hover:bg-zinc-950 color-primary-green rounded-full absolute bi-play-fill text-6xl max-md:text-5xl bi bi-play-circle color-primary-green cursor-pointer"
-    ></i>
+      class="px-4 py-[8px] rounded-full bg-black absolute cursor-pointer"
+    >
+      <img src="../../../assets/images/gallery.svg" alt="" srcset="" />
+    </i>
     <div
       *ngIf="isProjectHover"
-      class="absolute bottom-4 left-4 max-md:left-2 max-md:bottom-2 flex justify-start items-center gap-1"
+      class="absolute bottom-4 left-4 max-lg:left-2 max-lg:bottom-2 flex justify-start items-center gap-1"
     >
       <span
-        class="max-md:text-[9px] bg-black rounded-xl py-1 px-2 text-[11px] border-neutral-600 opacity-70 border-[1px] text-neutral-600 flex justify-center items-center color-primary-green"
+        *ngFor="let tech of data.techs"
+        class="max-lg:text-[9px] bg-black rounded-xl py-1 px-2 text-[11px] border-neutral-600 opacity-95 border-[1px] text-neutral-600 flex justify-center items-center color-primary-green"
         style="border-color: var(--color-primary-color)"
-        >Ts</span
-      >
-      <span
-        class="max-md:text-[9px] bg-black rounded-xl py-1 px-2 text-[11px] border-[1px] opacity-70 color-primary-green"
-        style="border-color: var(--color-primary-color)"
-        >Angular</span
-      >
-      <span
-        class="max-md:text-[9px] bg-black rounded-xl py-1 px-2 text-[11px] border-[1px] opacity-70 color-primary-green"
-        style="border-color: var(--color-primary-color)"
-        >css Animation</span
+        >{{ tech }}</span
       >
     </div>
   </div>
   <div class="flex justify-between mt-2 items-center text-white">
-    <h4 class="text-white font-bold">{{ data.title }}</h4>
+    <h4 class="text-white font-bold max-lg:text-sm">{{ data.title }}</h4>
     <div class="flex gap-2 justify-center items-center">
       <a
         target="blank"
@@ -52,7 +45,7 @@
             <path
               d="m243-192-51-51 429-429H384v-72h360v360h-72v-237L243-192Z"
             /></svg></i
-        ><span class="max-sm:text-text-sm">Website</span></a
+        ><span class="max-lg:text-sm">Website</span></a
       >
       <a href="{{ data.github }}">
         <i
@@ -70,19 +63,19 @@
 <!-- 
 
  <div
-    class="relative border-[1px] hover:border-2 border-neutral-800 cursor-pointer rounded-md flex justify-center items-stretch gap-4 mb-12 w-[60rem] max-md:w-full h-60 max-md:h-36 max-md:flex max-md:justify-center max-md:items-center"
+    class="relative border-[1px] hover:border-2 border-neutral-800 cursor-pointer rounded-md flex justify-center items-stretch gap-4 mb-12 w-[60rem] max-lg:w-full h-60 max-lg:h-36 max-lg:flex max-lg:justify-center max-lg:items-center"
   >
     <span
-      class="color-primary-green absolute text-sm hidden bottom-2 right-3 max-md:flex justify-center items-center"
+      class="color-primary-green absolute text-sm hidden bottom-2 right-3 max-lg:flex justify-center items-center"
       >Watch the video
       <i class="bi bi-play-fill color-primary-color"></i>
     </span>
     <video
       poster="../../../assets/images/kfragrance-poster.png"
       src=""
-      class="rounded-md bg-black h-full w-[60%] max-md:w-full"
+      class="rounded-md bg-black h-full w-[60%] max-lg:w-full"
     ></video>
-    <div class="p-4 pe-7 w-[40%] text-white max-md:hidden">
+    <div class="p-4 pe-7 w-[40%] text-white max-lg:hidden">
       <span class="font-bold color-primary-green text-xl"
         >Ecommerce - KFragrance</span
       >

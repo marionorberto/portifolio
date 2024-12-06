@@ -1,9 +1,0 @@
-.black74 {
-  color: rgb(66, 66, 66);
-}
-
-@media (max-width: 640px) {
-  .nav {
-    display: none;
-  }
-}

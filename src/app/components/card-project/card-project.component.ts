@@ -17,6 +17,7 @@ export class CardProjectComponent {
   isProjectHover: boolean = false;
   @Input() data: any;
 
+
   handleProjectHover() {
     this.isProjectHover = true;
   }
