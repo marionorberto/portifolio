@@ -1,6 +1,7 @@
 <div>
   <div class="relative flex justify-center items-center">
     <div
+      (click)="openDialog()"
       (mouseover)="handleProjectHover()"
       (mouseout)="handleProjectBlur()"
       class="bg-black text-sm border-neutral-800 opacity-95 h-64 w-[29rem] max-lg:w-[34rem] max-lg:h-[10rem] rounded-md hover:border-2 border-[1px] flex flex-col justify-center items-center"
@@ -11,7 +12,12 @@
       *ngIf="isProjectHover"
       class="px-4 py-[8px] rounded-full bg-black absolute cursor-pointer"
     >
-      <img src="../../../assets/images/gallery.svg" alt="" srcset="" />
+      <img
+        (click)="openDialog()"
+        src="../../../assets/images/gallery.svg"
+        alt=""
+        srcset=""
+      />
     </i>
     <div
       *ngIf="isProjectHover"
@@ -53,6 +59,7 @@
         ></i>
       </a>
       <i
+        (click)="openDialog()"
         class="bi bi-play-fill bg-zinc-800 flex justify-center items-center w-6 h-6 py-2 px-2 rounded-full text-xl hover:bg-zinc-900 cursor-pointer color-primary-green"
       ></i>
     </div>

@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { CardProjectComponent } from "../card-project/card-project.component";
 import { DataService } from '../../services/data.service';
 
+
+
 @Component({
   selector: 'app-works',
   standalone: true,
@@ -40,19 +42,19 @@ export class WorksComponent implements OnInit {
   }
 
   getFourFrontendProjects(): void{
-    this.dataService.getFrontendProjects().slice(0, 4).map((item) => {
+    this.dataService.getFrontendProjects().slice(0, 5).map((item) => {
       this.frontendProjects.push(item);
     });
   }
 
   getFourBackendProjects(): void{
-    this.dataService.getBackendProjects().slice(0, 4).map((item) => {
+    this.dataService.getBackendProjects().slice(0, 2).map((item) => {
       this.backendProjects.push(item);
     })
   }  
 
   getFourFullstackProjects(): void{
-    this.dataService.getFullstackProjects().slice(0, 4).map((item) => {
+    this.dataService.getFullstackProjects().slice(0, 2).map((item) => {
       this.fullstackProjects.push(item);
     })
   }  
