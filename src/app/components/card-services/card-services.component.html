@@ -1,23 +1,9 @@
 <section
-  class="overflow-x-hidden overflow-y-hidden relative bg-neutral-900 p-3 border-[1px] border-neutral-800 rounded-md h-64 w-72 max-lg:w-64"
+  class="overflow-x-hidden overflow-y-hidden relative bg-neutral-900 p-3 border-[1px] border-neutral-800 rounded-sm h-64 w-[17rem] max-lg:w-64"
 >
   <div
     class="absolute top-4 grid grid-cols-9 grid-rows-6 min-sm:grid-cols-1 min-sm:grid-rows-1 opacity-50 z-10"
   >
-    <div
-      class="border-[1px] border-t-0 border-l-0 opacity-5 border-neutral-700 h-16 w-12"
-    ></div>
-    <div
-      class="border-[1px] border-t-0 opacity-35 border-neutral-700 h-16 w-12"
-    ></div>
-    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
-    <div
-      class="border-[1px] opacity-25 border-[var(--color-primary-green)] h-16 w-12"
-    ></div>
-    <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
-    <div
-      class="border-[1px] opacity-25 border-[var(--color-primary-green)] h-16 w-12"
-    ></div>
     <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
     <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
     <div class="border-[1px] opacity-35 border-neutral-700 h-16 w-12"></div>
@@ -29,9 +15,6 @@
       class="border-[1px] border-r-0 opacity-35 border-neutral-700 h-16 w-12"
     ></div>
 
-    <div
-      class="border-[1px] border-l-0 border-b-0 opacity-25 border-[var(--color-primary-green)] h-16 w-12"
-    ></div>
     <div
       class="border-[1px] border-b-0 opacity-25 border-[var(--color-primary-green)] h-16 w-12"
     ></div>
@@ -68,11 +51,11 @@
     >{{ data.title }}</span
   >
   <div
-    class="ps-1 mt-2 text-[16px] text-start font-light text-gray-200 text-base max-lg:text-sm"
+    class="ps-1 mt-2 text-start font-light text-gray-200 text-[15px] max-lg:text-sm"
   >
     {{ data.text }}
     <strong class="color-primary-green" *ngFor="let item of data.languages"
-      >{{ item }}, </strong
-    >...
+      >{{ item }}
+    </strong>
   </div>
 </section>
