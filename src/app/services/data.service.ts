@@ -109,10 +109,10 @@ export class DataService {
         ]
       },
       {
-        title: 'Softfy Landing page',
-        description: 'Softfy is a simple landing page for showing softwares solutions.',
+        title: 'SoftFy Landing page',
+        description: 'SoftFy is a simple landing page for showing softwares solutions.',
         poster: '../../../assets/images/softfy-poster.png',
-        site: '',
+        site: 'https://softfy-landingpage.vercel.app',
         github: 'https://github.com/marionorberto/softfy-landingpage',
         mediaUrls: [
           '../../../assets/images/softfy-poster.png',
