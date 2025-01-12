@@ -107,7 +107,26 @@ export class DataService {
           'ChartJS',
           'Css',
         ]
-      }
+      },
+      {
+        title: 'Softfy Landing page',
+        description: 'Softfy is a simple landing page for showing softwares solutions.',
+        poster: '../../../assets/images/softfy-poster.png',
+        site: '',
+        github: 'https://github.com/marionorberto/softfy-landingpage',
+        mediaUrls: [
+          '../../../assets/images/softfy-poster.png',
+          '../../../assets/images/softfy-img-1.png',
+          '../../../assets/images/softfy-img-2.png',
+          '../../../assets/images/softfy-img-3.png',
+          '../../../assets/images/softfy-img-4.png',
+        ],
+        techs: [
+          'Javascript',
+          'Css',
+          'Bootstrap5',
+        ]
+      },
     ],
     backend: [
       {
@@ -150,46 +169,7 @@ export class DataService {
           'MYSQL'
         ]
       },
-      // {
-      //   title: 'project-redis',
-      //   description: '----',
-      //   poster: '../../../assets/images/project-redis.png',
-      //   site: '---',
-      //   github: '---',
-      //   mediaUrls: [
-      //     'project-redis-video',
-      //     'project-redis-img-1',
-      //     'project-redis-img-2',
-      //     'project-redis-img-3',
-      //     'project-redis-img-4',
-      //   ],
-      //   techs: [
-      //     'Typescript',
-      //     'Express',
-      //     'JWT',
-      //     'MYSQL'
-      //   ]
-      // },
-      // {
-      //   title: 'project-kafka',
-      //   description: '---',
-      //   poster: '../../../assets/images/project-kafka.png',
-      //   site: '---',
-      //   github: '---',
-      //   mediaUrls: [
-      //     'project-kafka-video',
-      //     'project-kafka-img-1',
-      //     'project-kafka-img-2',
-      //     'project-kafka-img-3',
-      //     'project-kafka-img-4',
-      //   ],
-      //   techs: [
-      //     'Typescript',
-      //     'NestJS',
-      //     'APACHE KAFKA',
-      //     'PostgresSQL'
-      //   ]
-      // }
+      
     ],
     fullstack: [
       {
@@ -234,64 +214,6 @@ export class DataService {
           'API CONSUMING'
         ]
       },
-//  {
-//         title: 'Tasker',
-//         description: '---',
-//         poster: '../../../assets/images/tasker-poster.png',
-//         site: '---',
-//         github: 'https://github.com/marionorberto/tasker',
-//         mediaUrls: [
-//           'tasker-video',
-//           'tasker-img-1',
-//           'tasker-img-2',
-//           'tasker-img-3',
-//           'tasker-img-4',
-//         ],
-//         techs: [
-//           'Typescript',
-//           'Angular',
-//           'Ng-Bstrap',
-//           'API CONSUMING'
-//         ]
-//       },
-//  {
-//         title: 'Tasker',
-//         description: '---',
-//         poster: '../../../assets/images/tasker-poster.png',
-//         site: '---',
-//         github: 'https://github.com/marionorberto/tasker',
-//         mediaUrls: [
-//           'tasker-video',
-//           'tasker-img-1',
-//           'tasker-img-2',
-//           'tasker-img-3',
-//           'tasker-img-4',
-//         ],
-//         techs: [
-//           'Typescript',
-//           'Angular',
-//           'Ng-Bstrap',
-//           'API'
-//         ]
-//       },            
-      // {
-      //   title: '',
-      //   description: '',
-      //   poster: '',
-      //   site: '',
-      //   github: '',
-      //   mediaUrls: [],
-      //   techs: []
-      // },
-      // {
-      //   title: '',
-      //   description: '',
-      //   poster: '',
-      //   site: '',
-      //   github: '',
-      //   mediaUrls: [],
-      //   techs: []
-      // },
     ],
    },
   ]
@@ -308,22 +230,4 @@ export class DataService {
     return this.projects[0].fullstack;
   }
 
-
-
-  //   {
-  //     name: 'Pokedex',
-  //     link: 'https://pokedex-poke-two.vercel.app/',
-  //     github: 'https://github.com/marionorberto/pokedex'
-  //   },
-  //   {
-  //     name: 'Tablecoin',
-  //     link: 'https://tablecoin.vercel.app',
-  //     github: 'https://github.com/marionorberto/tablecoin'
-  //   },
-  //   {
-  //     name: 'Portifolio',
-  //     link: 'https://marionorberto.vercel.app/',
-  //     github: 'https://github.com/marionorberto/portifolio'
-  //   },
-  // ] 
 }
