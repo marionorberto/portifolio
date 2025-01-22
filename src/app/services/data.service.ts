@@ -127,6 +127,25 @@ export class DataService {
           'Bootstrap5',
         ]
       },
+        {
+        title: 'TeamPace',
+        description: 'team-pace is a dashboard that helps you manage your software project properly.',
+        poster: '../../../assets/images/team-pace-poster.png',
+        site: 'https://team-pace.vercel.app/teampace/login',
+        github: 'https://github.com/marionorberto/team-pace',
+        mediaUrls: [
+          '../../../assets/images/team-pace-poster.png',
+          '../../../assets/images/team-pace-img-1.png',
+          '../../../assets/images/team-pace-img-2.png',
+          '../../../assets/images/team-pace-img-3.png',
+          '../../../assets/images/team-pace-img-4.png',
+        ],
+        techs: [
+          'Angular',
+          'Tailwing',
+          'chartJs',
+        ]
+      },
     ],
     backend: [
       {

@@ -42,7 +42,7 @@ export class WorksComponent implements OnInit {
   }
 
   getFourFrontendProjects(): void{
-    this.dataService.getFrontendProjects().slice(0, 6).map((item) => {
+    this.dataService.getFrontendProjects().slice(0, 7).map((item) => {
       this.frontendProjects.push(item);
     });
   }
